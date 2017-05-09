@@ -1,0 +1,34 @@
+{
+  "name": "who_are_you_the_game",
+  "version": "1.0.0",
+  "description": "Ask your friends, family, complete strangers personal and not so personal questions. A great way to lose and make new friends. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thensle/whoAreYou_Game.git"
+  },
+  "keywords": [
+    "game",
+    "nsfw",
+    "whoareyou",
+    "questions"
+  ],
+  "author": "Tara Hensle, Chris Leeson, Julie Fisher, Michael Realy, Liam Fox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thensle/whoAreYou_Game/issues"
+  },
+  "homepage": "https://github.com/thensle/whoAreYou_Game#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.8",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.4"
+  }
+}
