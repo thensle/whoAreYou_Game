@@ -24,6 +24,7 @@ fs
     db[model.name] = model;
   });
 
+//return an array of the object's and its properties, in the same order as provided by a for...in loop.
 Object.keys(db).forEach(function(modelName) {
   if (db[modelName].associate) {
     db[modelName].associate(db);
