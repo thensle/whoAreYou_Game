@@ -4,7 +4,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var handlebars = require("handlebars");
 var exphbs = require("express-handlebars");
-var methodOverride =require ("method-override"); 
+var methodOverride = require("method-override"); 
 
 
 // Sets up the Express App
@@ -13,7 +13,14 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 app.use(methodOverride("_method")); 
 // Set Handlebars as the default templating engine.
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+
+var hbs = exphbs.create({
+	defaultLayout: "main",
+	partialsDir: [ 
+		"views/partials/"]
+});
+
+app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 app.use(express.static(__dirname + "/public")); 

@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS `question_db`
+DROP DATABASE IF EXISTS `question_db`;
 
 CREATE DATABASE `question_db`;
 
