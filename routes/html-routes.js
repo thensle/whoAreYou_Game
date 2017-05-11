@@ -16,4 +16,16 @@ module.exports = function(app) {
     res.render(path.join(__dirname + "/../views/user.handlebars"));
   });
 
+ app.get("/createCard", function(req, res) {
+    res.render(path.join(__dirname + "/../views/update.handlebars"));
+  });
+
+app.get("/nsfw", function(req, res) {
+    res.render(path.join(__dirname + "/../views/NSFW.handlebars"));
+  });
+
+app.get("/sfw", function(req, res) {
+    res.render(path.join(__dirname + "/../views/SFW.handlebars"));
+  });
+
 };

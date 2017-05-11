@@ -1,0 +1,35 @@
+.jumbotron{text-align:center;}
+
+.body{}
+
+
+
+
+.startSFWDeck{text-align: center;
+			font-size: 30px;
+			background-color: grey; 
+			color:black;
+			height: 300px;
+			width:450px;
+			
+			}
+.startNSFWDeck{text-align: center;
+			font-size: 30px;
+			background-color: grey; 
+			color:black;
+			height: 300px;
+			width:450px;
+			}
+.addQuestionButton{margin-top: 10px;}
+.backButton{margin-top: 100px;}
+
+.createCard{
+	
+width:900px;
+height: 100px;
+background-color: grey;
+font-size: 30px; 
+}
+
+.row{margin-left: 0px;
+margin-right:0px;}
