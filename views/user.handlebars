@@ -3,3 +3,19 @@
 
 {{!-- // This code will link your header code into the page.  --}}
 {{> header}}
+
+{{!-- // This code will link your header code into the page. {{> header}} --}}
+
+
+
+<form action="api/addQuestion" method="POST" id="questions-form">
+	<label for="">Type Your Question:</label>
+    <input class="form-control" placeholder="Add a question" type="text" name="newQuestion" />
+    <label for="">Is it safe for work? Type your bool!!!</label>
+    <input class="form-control" type="number" name="newSfw">
+    <button type="submit" class="btn btn-default">Add Question</button>
+</form>
+
+<form action="api/questions/11?_method=DELETE" method="POST">
+	<button type="submit">Delete</button>
+</form>
