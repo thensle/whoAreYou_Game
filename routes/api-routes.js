@@ -25,7 +25,8 @@ module.exports = function(app) {
   })
 
   app.delete("/api/questions/:id", function(req, res) {
-    // We just have to specify which todo we want to destroy with "where"
+    // We just have to specify which todo we want to destroy with "where" 
+    // Liam says: I like how you left the comment of todo here.
     db.Questions.destroy({
       where: {
         id: req.params.id
@@ -35,5 +36,8 @@ module.exports = function(app) {
     });
 
   });
+
+  // app.  
+
 };
 
