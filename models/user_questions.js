@@ -1,21 +1,23 @@
 module.exports = function(sequelize, DataTypes) {
-  var userQuestions = sequelize.define("Questions", {
-    question: DataTypes.STRING,
-    sfw: DataTypes.BOOLEAN
-  }, {
-  	timestamps: false
+  var userQuestions = sequelize.define("userQuestions", {
+    question: {
+      type: DataTypes.STRING
+    },
+    sfw: { 
+        type: DataTypes.BOOLEAN    
+    }
   },
-  {
-  	classMethods: {
-  		associate: function(models){
-  			userQuestions.belongsTo(models.User, {
-  				foreignKey: {
-  					allowNull: false
-  				}
-  			});
-  	}
-  }
+    {
+      classMethod: function(models){
+        userQuestions.belongsTo(models.Users, {
+          foreignKey:{
+            allowNull: false
+          }
+        });
+      }
+    }
+  );
 
- });
-  return userQuestions;
+    console.log('this is user questions' + userQuestions)
+    return userQuestions;
 };
