@@ -1,28 +1,29 @@
-module.exports = function(sequelize, DataTypes){
-	var User = sequelize.define("User", {
-		email: {
-			type: DataTypes.STRING,
-			allowNull: false,
-			validate: {
-				isEmail: true
-			}
-		},
-		password: {
-			type: DataTypes.STRING,
-			allowNull: false,
-		},
-		{
-			timestamps: true
-		},
-		{
-			classMethods: {
-				associate: function(models){
-					User.hasMany(models.userQuestions, {
-						onDelete: "cascade"
-					});
-				}
-			}
-		}
+module.exports = function(sequelize, DataTypes) {
+    var Users = sequelize.define("users", {
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isEmail: true
+            }
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+    },
+	    {
+	    	classMethods: {
+	    		associate: function(models){
+	    			Users.hasMany(models.userQuestions, {
+	    				onDelete: "cascade"
+	    			});
+	    		}
+	    	}
+	    }
 
-	})
+    );
+    
+    console.log("this is user: " + Users);
+    return Users;
 };
