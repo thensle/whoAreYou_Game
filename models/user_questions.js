@@ -2,6 +2,8 @@ module.exports = function(sequelize, DataTypes) {
   var userQuestions = sequelize.define("Questions", {
     question: DataTypes.STRING,
     sfw: DataTypes.BOOLEAN
+  }, {
+  	timestamps: false
   },
   {
   	classMethods: {
