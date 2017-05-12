@@ -1,21 +1,29 @@
 module.exports = function(sequelize, DataTypes) {
-  var userQuestions = sequelize.define("Questions", {
-    question: DataTypes.STRING,
-    sfw: DataTypes.BOOLEAN
-  }, {
-  	timestamps: false
-  },
-  {
-  	classMethods: {
-  		associate: function(models){
-  			userQuestions.belongsTo(models.User, {
-  				foreignKey: {
-  					allowNull: false
-  				}
-  			});
-  	}
-  }
+    var Users = sequelize.define("users", {
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isEmail: true
+            }
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+    },
+	    {
+	    	classMethods: {
+	    		associate: function(models){
+	    			Users.hasMany(models.userQuestions, {
+	    				onDelete: "cascade"
+	    			});
+	    		}
+	    	}
+	    }
 
- });
-  return userQuestions;
+    );
+    
+    console.log("this is user: " + Users);
+    return Users;
 };
