@@ -15,8 +15,10 @@ module.exports = function(app) {
   	})
   });
 
-  ap.get("/api/randomQuestions", function(req, res){
-    db.Questions.findOne({}).then(function(dbQuestions){
+  app.get("/api/questions", function(req, res){
+    db.Questions.findOne({
+      question: req.params.
+    }).then(function(dbQuestions){
       res.json(dbQuestions);
     })
   });
