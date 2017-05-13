@@ -15,6 +15,14 @@ module.exports = function(app) {
   	})
   });
 
+  // app.get("/api/nextQuestion", function(req, res) {
+  //   db.Questions.findOne({
+
+  //   }).then(function(dbQuestions){
+  //     res.json(dbQuestions)
+  //   })
+  // });
+
   app.post("/api/addQuestion", function(req,res){
   	db.Questions.create({
   		question: req.body.newQuestion, 
