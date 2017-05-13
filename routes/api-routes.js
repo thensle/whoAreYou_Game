@@ -16,8 +16,10 @@ module.exports = function(app) {
   });
 
   ap.get("/api/questions", function(req, res){
-    db.Questions.
-  })
+    db.Questions.findOne({}).then(function(dbQuestions){
+      res.json(dbQuestions);
+    })
+  });
 
   app.post("/api/addQuestion", function(req,res){
   	db.Questions.create({
