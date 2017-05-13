@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	
-	var questions;
+	// var questions;
 
-	$(document).on("click", "#sfw-next", postSFW);
+	$(document).on("click", "#sfw-next", getSFW);
 	});
 
 	function getSFW(){
-	  $.get("/sfw", function(data){
+	  $.post("/sfw", function(data){
 	    console.log(data);
-	    questions = data;
+	    // questions = data;
 	  })
 
   	function postSFW(){

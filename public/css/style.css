@@ -1,35 +1,81 @@
-.jumbotron{text-align:center;}
+.jumbotron{ text-align:center; }
 
-.body{}
+body{
+	background: -webkit-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	background: -o-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	background: linear-gradient(51deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}	
 
 
 
 
-.startSFWDeck{text-align: center;
-			font-size: 30px;
-			background-color: grey; 
-			color:black;
-			height: 300px;
-			width:450px;
+.startSFWDeck {
+	/*vertical-align: center;*/
+	color: lightgray;
+	transition: .5s ease;
+	text-align: center;
+	font-size: 30px;
+	/*background-color: grey; */
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+	height: 300px;
+	width: 450px;
 			
-			}
-.startNSFWDeck{text-align: center;
-			font-size: 30px;
-			background-color: grey; 
-			color:black;
-			height: 300px;
-			width:450px;
-			}
-.addQuestionButton{margin-top: 10px;}
-.backButton{margin-top: 100px;}
-
-.createCard{
-	
-width:900px;
-height: 100px;
-background-color: grey;
-font-size: 30px; 
 }
 
-.row{margin-left: 0px;
-margin-right:0px;}
+
+.startSFWDeck:hover {
+	font-size:50px;
+	color: white;
+	transition: .5s ease;
+	background-color: Transparent;
+    background-repeat:no-repeat;
+}
+
+.startNSFWDeck {
+	color: lightgray;
+	transition: .5s ease;
+	text-align: center;
+	font-size: 30px;
+	/*background-color: grey; */
+	background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+	height: 300px;
+	width: 450px;
+}
+
+.startNSFWDeck:hover {
+	font-size:50px;
+	color: white;
+	transition: .5s ease;
+	background-color: Transparent;
+    background-repeat:no-repeat;
+}
+
+.addQuestionButton{ margin-top: 10px; }
+.backButton{ margin-top: 100px; }
+
+.createCard{
+	width: 900px;
+	height: 100px;
+	background-color: grey;
+	font-size: 30px; 
+}
+
+.row{
+	margin-left: 0px;
+	margin-right:0px;}
+
+/*Background Styling */
+
+.gradient {
+
+}
