@@ -15,7 +15,7 @@ module.exports = function(app) {
   	})
   });
 
-  ap.get("/api/questions", function(req, res){
+  ap.get("/api/randomQuestions", function(req, res){
     db.Questions.findOne({}).then(function(dbQuestions){
       res.json(dbQuestions);
     })
