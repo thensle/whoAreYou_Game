@@ -7,10 +7,17 @@ body{
 	background: linear-gradient(51deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }	
 
-
+.title-name {
+	transition: .5s ease;
+	color: tomato;
+}
+.title-name:hover {
+	transition: .5s ease;
+	color: rosybrown;
+	text-decoration:none;
+}
 
 /* Basic stylistic look of NSFW and SWF */
-
 .startSFWDeck,
 .startNSFWDeck {
 
@@ -21,18 +28,18 @@ body{
 	font-size: 30px;
 	/*background-color: grey; */
 	background-color: Transparent;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     border: none;
     cursor: pointer;
     overflow: hidden;
-    outline:none;
+    outline: none;
 	height: 300px;
 	width: 450px;	
 }
 
 /* Hover for SFW and NSFW */
 .startSFWDeck:hover,
-.startNSFWDeck:hover { {
+.startNSFWDeck:hover {
 
 	font-size:50px;
 	color: white;
@@ -41,16 +48,40 @@ body{
     background-repeat:no-repeat;
 }
 
-.addQuestionButton{ margin-top: 10px; }
-.backButton{ margin-top: 100px; }
+.addQuestionButton { margin-top: 10px; }
 
-.createCard{
+.backButton { margin-top: 100px; }
+
+.createCard {
 	width: 900px;
 	height: 100px;
 	background-color: grey;
 	font-size: 30px; 
 }
 
-.row{
+.row {
 	margin-left: 0px;
-	margin-right:0px;}
+	margin-right:0px;
+}
+
+	
+	/* ===== TITLE ANIMATIONS ===== */
+/* animation frames*/
+@keyframes pulsate {
+	0% { transform: scale(1); }
+	30% { transform: scale(1); }
+	40% { transform: scale(1.08); }
+	50% { transform: scale(1); }
+	60% { transform: scale(1); }
+	70% { transform: scale(1.05); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+
+.pulse {
+  	animation-name: pulsate;
+	animation-duration: 3000ms;
+	transform-origin:70% 70%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
