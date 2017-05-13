@@ -8,6 +8,12 @@ var Sequelize = require("sequelize");
 // Routes
 // =============================================================
 module.exports = function(app) {
+  // GET route
+ app.get(“/api/questions”, function(req, res) {
+     db.Questions.findAll({}).then(function(dbQuestions){
+         res.json(dbQuestions);
+     })
+ });
 
   // GET NSFW route 
   app.get("/nsfw", function(req, res) {
@@ -25,7 +31,7 @@ module.exports = function(app) {
   });
 
   //  // GET SFW route 
-  app.get("/sfw", function(req, res) {
+  app.post("/sfw", function(req, res) {
     db.Questions.findAll({
       limit: 1,
       order: [
