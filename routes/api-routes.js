@@ -15,6 +15,10 @@ module.exports = function(app) {
   	})
   });
 
+  ap.get("/api/questions", function(req, res){
+    db.Questions.
+  })
+
   app.post("/api/addQuestion", function(req,res){
   	db.Questions.create({
   		question: req.body.newQuestion, 
