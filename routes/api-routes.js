@@ -10,7 +10,7 @@ var Sequelize = require("sequelize");
 module.exports = function(app) {
 
   // GET NSFW route 
-  app.get("/questions/nsfw", function(req, res) {
+  app.get("/nsfw", function(req, res) {
   	db.Questions.findAll({
       limit: 1,
       order: [
@@ -25,7 +25,7 @@ module.exports = function(app) {
   });
 
   //  // GET SFW route 
-  app.get("/questions/sfw", function(req, res) {
+  app.get("/sfw", function(req, res) {
     db.Questions.findAll({
       limit: 1,
       order: [
