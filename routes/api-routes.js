@@ -8,12 +8,13 @@ var Sequelize = require("sequelize");
 // Routes
 // =============================================================
 module.exports = function(app) {
+  
   // GET route
- app.get(“/api/questions”, function(req, res) {
-     db.Questions.findAll({}).then(function(dbQuestions){
-         res.json(dbQuestions);
-     })
- });
+  app.get("/api/questions", function(req, res) {
+       db.Questions.findAll({}).then(function(dbQuestions){
+           res.json(dbQuestions);
+       })
+  });
 
   // GET NSFW route 
   app.get("/nsfw", function(req, res) {
