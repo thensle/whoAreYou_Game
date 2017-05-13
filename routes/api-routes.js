@@ -8,12 +8,33 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // GET route 
-  app.get("/api/questions", function(req, res) {
-  	db.Questions.findAll({}).then(function(dbQuestions){
-  		res.json(dbQuestions); 
+  // GET NSFW route 
+  app.get("/api/questions/nsfw", function(req, res) {
+  	db.Questions.findOne({
+      random: false,
+      limit: 1,
+      offset: 20,
+        where: {
+          sfw: false
+        } 
+    }).then(function(dbQuestions){
+  	res.json(dbQuestions); 
   	})
   });
+
+  //  // GET SFW route 
+  // app.get("/api/questions/nsfw", function(req, res) {
+  //   db.Questions.findOne({
+  //     random: false,
+  //     limit: 1,
+  //     offset: 20,
+  //       where: {
+  //         sfw: true
+  //       } 
+  //   }).then(function(dbQuestions){
+  //   res.json(dbQuestions); 
+  //   })
+  // });
 
   app.post("/api/addQuestion", function(req,res){
   	db.Questions.create({
