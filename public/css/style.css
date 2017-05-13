@@ -5,6 +5,8 @@ body{
 	background: -webkit-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: -o-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: linear-gradient(51deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	height: 100vw;
+	text-align: center;
 }	
 
 .title-name {
@@ -66,6 +68,7 @@ body{
 
 	
 	/* ===== TITLE ANIMATIONS ===== */
+
 /* animation frames*/
 @keyframes pulsate {
 	0% { transform: scale(1); }
@@ -81,7 +84,7 @@ body{
 .pulse {
   	animation-name: pulsate;
 	animation-duration: 3000ms;
-	transform-origin:70% 70%;
+	transform-origin: 70% 70%;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }

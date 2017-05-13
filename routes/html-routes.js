@@ -16,16 +16,21 @@ module.exports = function(app) {
     res.render(path.join(__dirname + "/../views/user.handlebars"));
   });
 
- app.get("/createCard", function(req, res) {
+  app.get("/createCard", function(req, res) {
     res.render(path.join(__dirname + "/../views/update.handlebars"));
   });
 
-app.get("/nsfw", function(req, res) {
-    res.render(path.join(__dirname + "/../views/NSFW.handlebars"));
-  });
+  app.get("/nsfw", function(req, res) {
+      res.render(path.join(__dirname + "/../views/NSFW.handlebars"));
+    });
 
-app.get("/sfw", function(req, res) {
-    res.render(path.join(__dirname + "/../views/SFW.handlebars"));
-  });
+  app.get("/sfw", function(req, res) {
+      res.render(path.join(__dirname + "/../views/SFW.handlebars"));
+    });
+  
+  // If no matching route is found default to home
+  app.use(function(req, res) {
+      res.render(path.join(__dirname, "/../views/index.handlebars"));
+    });
 
 };
