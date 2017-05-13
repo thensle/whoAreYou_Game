@@ -28,4 +28,9 @@ app.get("/sfw", function(req, res) {
     res.render(path.join(__dirname + "/../views/SFW.handlebars"));
   });
 
+   // user route loads user.handlebars
+app.get("/login", function(req, res) {
+  res.render(path.join(__dirname + "/../views/login.handlebars"));
+});
+
 };
