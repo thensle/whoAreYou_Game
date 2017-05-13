@@ -66,10 +66,10 @@ module.exports = function(app) {
   })
 
   app.post("/api/newUser", function(req,res){
-    db.Users.create({
+    db.users.create({
       email: req.body.userEmail, 
       password: "random password"
-    }).then(function(dbQuestions){
+    }).then(function(dbUsers){
       res.json(dbUsers);
     })
   })
