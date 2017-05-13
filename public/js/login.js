@@ -21,8 +21,8 @@ $(document).ready(function() {
   });
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
-  function loginUser(email, password) {
-    $.post("/api/login", {
+  function loginUser(email) {
+    $.post("/api/users", {
       email: email
     }).then(function(data) {
       window.location.replace(data);

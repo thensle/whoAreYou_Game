@@ -1,27 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
     var Users = sequelize.define("users", {
         email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                isEmail: true
-            }
+            type: DataTypes.STRING
         },
         password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+            type: DataTypes.STRING
+        }
     },
 	    {
-	    	classMethods: {
-	    		associate: function(models){
-	    			Users.hasMany(models.userQuestions, {
-	    				onDelete: "cascade"
-	    			});
-	    		}
-	    	}
+           timestamps: false 
 	    }
-
     );
     console.log("this is user: " + Users);
     return Users;

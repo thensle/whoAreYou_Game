@@ -3,13 +3,15 @@
 
 // Requiring our models
 var db = require("../models");
+var User = require("../models/user.js");
 var Sequelize = require("sequelize");
 
+console.log(Object.keys(db));
 // Routes
 // =============================================================
 module.exports = function(app) {
 
-  //All Questions API Call
+//All Questions API Call
   app.get("/api/questions", function(req, res) {
      db.Questions.findAll({}).then(function(dbQuestions){
          res.json(dbQuestions);
@@ -18,7 +20,8 @@ module.exports = function(app) {
 
 //All Users API Call
   app.get("/api/users", function(req, res) {
-     db.Users.findAll({}).then(function(dbUsers){
+     db.users.findAll({}).then(function(dbUsers){
+          console.log(dbUsers);
          res.json(dbUsers);
      })
  });
@@ -60,6 +63,15 @@ module.exports = function(app) {
   	}).then(function(dbQuestions){
   		res.json(dbQuestions); 
   	})
+  })
+
+  app.post("/api/newUser", function(req,res){
+    db.Users.create({
+      email: req.body.userEmail, 
+      password: "random password"
+    }).then(function(dbQuestions){
+      res.json(dbUsers);
+    })
   })
 
   app.delete("/api/questions/:id", function(req, res) {
