@@ -3,17 +3,19 @@
 
 // Requiring our models
 var db = require("../models");
+var Sequelize = require("sequelize");
 
 // Routes
 // =============================================================
 module.exports = function(app) {
 
   // GET NSFW route 
-  app.get("/api/questions/nsfw", function(req, res) {
-  	db.Questions.findOne({
-      random: false,
+  app.get("/questions/nsfw", function(req, res) {
+  	db.Questions.findAll({
       limit: 1,
-      offset: 20,
+      order: [
+        [Sequelize.fn('RAND')]
+      ],
         where: {
           sfw: false
         } 
@@ -23,18 +25,19 @@ module.exports = function(app) {
   });
 
   //  // GET SFW route 
-  // app.get("/api/questions/nsfw", function(req, res) {
-  //   db.Questions.findOne({
-  //     random: false,
-  //     limit: 1,
-  //     offset: 20,
-  //       where: {
-  //         sfw: true
-  //       } 
-  //   }).then(function(dbQuestions){
-  //   res.json(dbQuestions); 
-  //   })
-  // });
+  app.get("/questions/sfw", function(req, res) {
+    db.Questions.findAll({
+      limit: 1,
+      order: [
+        [Sequelize.fn('RAND')]
+      ],
+        where: {
+          sfw: true
+        } 
+    }).then(function(dbQuestions){
+    res.json(dbQuestions); 
+    })
+  });
 
   app.post("/api/addQuestion", function(req,res){
   	db.Questions.create({
