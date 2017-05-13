@@ -1,6 +1,7 @@
 .jumbotron{ text-align:center; }
 
 body{
+	/*background styling */
 	background: -webkit-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: -o-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: linear-gradient(51deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
@@ -8,8 +9,11 @@ body{
 
 
 
+/* Basic stylistic look of NSFW and SWF */
 
-.startSFWDeck {
+.startSFWDeck,
+.startNSFWDeck {
+
 	/*vertical-align: center;*/
 	color: lightgray;
 	transition: .5s ease;
@@ -23,36 +27,13 @@ body{
     overflow: hidden;
     outline:none;
 	height: 300px;
-	width: 450px;
-			
+	width: 450px;	
 }
 
+/* Hover for SFW and NSFW */
+.startSFWDeck:hover,
+.startNSFWDeck:hover { {
 
-.startSFWDeck:hover {
-	font-size:50px;
-	color: white;
-	transition: .5s ease;
-	background-color: Transparent;
-    background-repeat:no-repeat;
-}
-
-.startNSFWDeck {
-	color: lightgray;
-	transition: .5s ease;
-	text-align: center;
-	font-size: 30px;
-	/*background-color: grey; */
-	background-color: Transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-	height: 300px;
-	width: 450px;
-}
-
-.startNSFWDeck:hover {
 	font-size:50px;
 	color: white;
 	transition: .5s ease;
@@ -73,9 +54,3 @@ body{
 .row{
 	margin-left: 0px;
 	margin-right:0px;}
-
-/*Background Styling */
-
-.gradient {
-
-}
