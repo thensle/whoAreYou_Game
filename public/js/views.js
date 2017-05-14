@@ -1,24 +1,32 @@
-$(document).ready(function() {
+// var path = require("path");
+
+
+
+
+
+// ORIGINAL JQUERY
+
+// $(document).ready(function() {
 	
-	// var questions;
+// 	// var questions;
 
-	$(document).on("click", "#sfw-next", getSFW);
-	});
+// 	$(document).on("click", "#sfw-next", getSFW);
+// 	});
 
-	function getSFW(){
-	  $.post("/sfw", function(data){
-	    console.log(data);
-	    // questions = data;
-	  })
+// 	function getSFW(){
+// 	  $.post("/sfw", function(data){
+// 	    console.log(data);
+// 	    // questions = data;
+// 	  })
 
-  	function postSFW(){
-  		$.ajax({
-  			method:"POST",
-  			url: "/sfw",
-  			data: question
-  		}).done(function(){
+//   	function postSFW(){
+//   		$.ajax({
+//   			method:"POST",
+//   			url: "/sfw",
+//   			data: question
+//   		}).done(function(){
 
-  		})
-  	}
+//   		})
+//   	}
 
-}
+// }
