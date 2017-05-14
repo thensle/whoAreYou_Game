@@ -22,6 +22,7 @@ module.exports = function(app) {
     var hbsObject = {
       quesObj: data
     };
+    
     console.log(hbsObject)
 
   	db.Questions.findAll({

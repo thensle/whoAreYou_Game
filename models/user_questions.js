@@ -18,6 +18,6 @@ module.exports = function(sequelize, DataTypes) {
     }
   );
 
-    console.log('this is user questions' + userQuestions)
+    // console.log('this is user questions' + userQuestions)
     return userQuestions;
 };

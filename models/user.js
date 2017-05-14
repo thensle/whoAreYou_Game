@@ -23,6 +23,7 @@ module.exports = function(sequelize, DataTypes) {
 	    }
 
     );
-    console.log("this is user: " + Users);
+    
+    // console.log("this is user: " + Users);
     return Users;
 };
