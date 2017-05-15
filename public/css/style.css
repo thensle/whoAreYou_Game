@@ -1,6 +1,6 @@
-.jumbotron{ text-align:center; }
+.jumbotron { text-align:center; }
 
-body{
+body {
 	/*background styling */
 	background: -webkit-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: -o-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
@@ -70,7 +70,7 @@ body{
 	/* ===== TITLE ANIMATIONS ===== */
 
 /* animation frames*/
-@keyframes pulsate {
+/*@keyframes pulsate {
 	0% { transform: scale(1); }
 	30% { transform: scale(1); }
 	40% { transform: scale(1.08); }
@@ -87,4 +87,4 @@ body{
 	transform-origin: 70% 70%;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-}
+}*/

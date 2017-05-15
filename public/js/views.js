@@ -2,8 +2,6 @@
 
 
 
-
-
 // ORIGINAL JQUERY
 
 // $(document).ready(function() {

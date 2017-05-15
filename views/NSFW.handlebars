@@ -1,8 +1,27 @@
 {{> header}}
-<div class="gradient">
+{{!-- <div class="gradient"> --}}
 <h1> NSFW </h1>
 
-<button type="submit">NEXT</button>
+<button action="api/questions/" method="GET" type="submit" id="nsfw-next">NEXT</button>
+{{!-- Creating a Modal Card --}}
+{{!-- <a class="btn" data-toggle="modal" href="#myModal">Launch Card</a>
 
-</div>
-{{!-- {{>footer}} --}}
+
+<div class="modal hide" id="myModal">
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>Card Header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+    <a href="#" class="btn btn-primary">Next</a>
+  </div>
+</div> --}}
+
+
+{{>footer}}
+
+

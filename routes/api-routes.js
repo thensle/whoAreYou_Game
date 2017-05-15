@@ -1,3 +1,4 @@
+// =============================================================
 // Dependencies
 // =============================================================
 
@@ -5,6 +6,7 @@
 var db = require("../models");
 var Sequelize = require("sequelize");
 
+// =============================================================
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -16,14 +18,19 @@ module.exports = function(app) {
        })
   });
 
+
+  // =============================================================
+  // DELETE this comment before submitting FINAL
+  // =============================================================
   // GET, 1 NSFW card at random, route 
+  
   app.get("/nsfw", function(req, res) {
     // creating a handlebars object
-    var hbsObject = {
-      quesObj: data
-    };
+    // var hbsObject = {
+    //   quesObj: data
+    // };
     
-    console.log(hbsObject)
+    // console.log(hbsObject)
 
   	db.Questions.findAll({
       limit: 1,
@@ -36,7 +43,12 @@ module.exports = function(app) {
     }).then(function(dbQuestions){
       res.render("nsfw", hbsObject); 
   	})
+    console.log('before the nsfw get request goes off.')
   });
+  
+  // =============================================================
+  // DELETE this comment before submitting FINAL
+  // =============================================================
 
 
   // GET, 1 SFW card at random, route 
