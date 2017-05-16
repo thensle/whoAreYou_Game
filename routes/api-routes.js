@@ -15,8 +15,6 @@ module.exports = function(app) {
   app.get("/api/questions", function(req, res) {
      db.Questions.findAll({}).then(function(dbQuestions){
          res.json(dbQuestions);
-         var edit = JSON.stringify(dbQuestions);
-         console.log(edit);
      })
  });
 
@@ -67,16 +65,6 @@ module.exports = function(app) {
   	})
   })
 
-  app.post("/newUser", function(req,res){
-    db.Users.create({
-      email: req.body.userEmail, 
-      password: req.body.userPassword
-    }).then(function(newUser){
-      createQuestions(newUser);
-      console.log(newUser);
-    })
-  })
-
   app.delete("/api/questions/:id", function(req, res) {
     // We just have to specify which todo we want to destroy with "where"
     db.Questions.destroy({
@@ -88,6 +76,71 @@ module.exports = function(app) {
     });
 
   });
+
+//After user is validated
+  app.post("/newUser", function(req, res){
+    db.Users.create({
+      email: req.body.userEmail, 
+      password: req.body.userPassword
+    }).then(function(newUser){
+      res.json(newUser);
+      createQuestions(newUser);
+    })
+  });
+
+ function createQuestions(newUser){
+    db.Questions.findAll({}).then(function(dbQuestions){
+
+      var templateQuestions = dbQuestions;
+      var id = newUser.id;
+
+      // var question_id = [];
+      var question_text = [];
+      var question_sfw = [];
+
+
+
+      for (var i = 0; i < templateQuestions.length; i++){
+        // question_id.push(templateQuestions[i].dataValues.id);
+        question_text.push(templateQuestions[i].dataValues.question);
+        question_sfw.push(templateQuestions[i].dataValues.sfw);
+      };
+
+      console.log("this is the length of the template array" + templateQuestions.length);
+
+      var instances = [];
+      
+
+        for (var i = 0; i < templateQuestions.length; i++){
+          var instance = {};
+
+            instance = {
+              // id: question_id[i], 
+              question: question_text[i], 
+              sfw: question_sfw[i], 
+              UserId: id
+            };
+
+            instances.push(instance);
+          };
+
+      db.userQuestions.bulkCreate(instances).then(function(){
+        return db.userQuestions.findAll();
+      });
+    });
+ 
+
+ };
 };
 
-app.
+ //Login an existing user
+
+ // app.post("/login", function(req,res){
+ //    var userEmail = req.body.userEmail;
+ //    var userPassword = req.body.userPassword;
+
+
+ //    }).then(function(data){
+ //      app.redirect(/)
+ //    })
+ //  });
