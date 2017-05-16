@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Users = sequelize.define("users", {
+    var Users = sequelize.define("Users", {
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -24,6 +24,5 @@ module.exports = function(sequelize, DataTypes) {
            timestamps: false 
         }
     );
-    console.log("this is user: " + Users);
     return Users;
 };

@@ -15,6 +15,8 @@ module.exports = function(app) {
   app.get("/api/questions", function(req, res) {
      db.Questions.findAll({}).then(function(dbQuestions){
          res.json(dbQuestions);
+         var edit = JSON.stringify(dbQuestions);
+         console.log(edit);
      })
  });
 
@@ -65,12 +67,13 @@ module.exports = function(app) {
   	})
   })
 
-  app.post("/api/newUser", function(req,res){
-    db.users.create({
+  app.post("/newUser", function(req,res){
+    db.Users.create({
       email: req.body.userEmail, 
-      password: "random password"
-    }).then(function(dbUsers){
-      res.json(dbUsers);
+      password: req.body.userPassword
+    }).then(function(newUser){
+      createQuestions(newUser);
+      console.log(newUser);
     })
   })
 
@@ -87,3 +90,4 @@ module.exports = function(app) {
   });
 };
 
+app.

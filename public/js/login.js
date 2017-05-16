@@ -1,9 +1,9 @@
 $(document).ready(function() {
-  var loginForm = $(".signInForm");
+  var loginForm = $(".createUserForm");
   var email = $(".userEmailClass");
-  // var passwordInput = $("input#password-input");
+  // var passwordInput =
 
-  // When the form is submitted, we validate there's an email and password entered
+  // When the form is submitted, validate email
   loginForm.on("submit", function(event) {
     event.preventDefault();
     var userData = {
@@ -15,21 +15,29 @@ $(document).ready(function() {
       return;
     }
 
-    // If we have an email and password we run the loginUser function and clear the form
+    if (userData.email.includes("@") === false) {
+      return;
+      //Need an error message to alert to user
+    }
+
+    //Call function to post to database, clear the HTML fields
     loginUser(userData.email);
     emailInput.val("");
   });
 
-  // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
-  function loginUser(email) {
+  //Make this post call once email is validated as unique and new in the users
+  //table in the database
+  function createUser(email) {
     $.post("/api/users", {
       email: email
     }).then(function(data) {
-      window.location.replace(data);
+      createQuestions(data);
       // If there's an error, log the error
     }).catch(function(err) {
       console.log(err);
     });
-  }
+  };
+
+
 
 });
