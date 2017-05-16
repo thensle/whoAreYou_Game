@@ -109,14 +109,14 @@ module.exports = function(app) {
       var templateQuestions = dbQuestions;
       var id = newUser.id;
 
-      // var question_id = [];
+
       var question_text = [];
       var question_sfw = [];
 
 
 
       for (var i = 0; i < templateQuestions.length; i++){
-        // question_id.push(templateQuestions[i].dataValues.id);
+        
         question_text.push(templateQuestions[i].dataValues.question);
         question_sfw.push(templateQuestions[i].dataValues.sfw);
       };
@@ -130,7 +130,7 @@ module.exports = function(app) {
           var instance = {};
 
             instance = {
-              // id: question_id[i], 
+              
               question: question_text[i], 
               sfw: question_sfw[i], 
               UserId: id
