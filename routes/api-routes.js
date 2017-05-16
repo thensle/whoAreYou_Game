@@ -6,7 +6,7 @@ var db = require("../models");
 var User = require("../models/user.js");
 var Sequelize = require("sequelize");
 
-console.log(Object.keys(db));
+
 // Routes
 // =============================================================
 module.exports = function(app) {
