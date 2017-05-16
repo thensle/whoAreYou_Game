@@ -10,24 +10,31 @@ console.log(Object.keys(db));
 // Routes
 // =============================================================
 module.exports = function(app) {
-
-//All Questions API Call
+  
+  // GET route
   app.get("/api/questions", function(req, res) {
-     db.Questions.findAll({}).then(function(dbQuestions){
-         res.json(dbQuestions);
-     })
- });
+       db.Questions.findAll({}).then(function(dbQuestions){
+           res.json(dbQuestions);
+       })
+  });
 
 //All Users API Call
   app.get("/api/users", function(req, res) {
      db.users.findAll({}).then(function(dbUsers){
-          console.log(dbUsers);
          res.json(dbUsers);
      })
  });
 
   // GET NSFW route 
+  // GET, 1 NSFW card at random, route 
   app.get("/nsfw", function(req, res) {
+    // creating a handlebars object
+    var hbsObject = {
+      quesObj: data
+    };
+    
+    console.log(hbsObject)
+
   	db.Questions.findAll({
       limit: 1,
       order: [
@@ -37,12 +44,13 @@ module.exports = function(app) {
           sfw: false
         } 
     }).then(function(dbQuestions){
-  	res.json(dbQuestions); 
+      res.render("nsfw", hbsObject); 
   	})
   });
 
-  //  // GET SFW route 
-  app.get("/sfw", function(req, res) {
+
+  // GET, 1 SFW card at random, route 
+  app.post("/sfw", function(req, res) {
     db.Questions.findAll({
       limit: 1,
       order: [
@@ -55,6 +63,7 @@ module.exports = function(app) {
     res.json(dbQuestions); 
     })
   });
+
 
   app.post("/api/addQuestion", function(req,res){
   	db.Questions.create({

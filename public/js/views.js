@@ -1,13 +1,32 @@
-$(document).ready(function() {
-	console.log('Beginning');
-
-	$(document).on("click", "#sfw-next", getSFW);
-	});
+// var path = require("path");
 
 
-	function getSFW(){
-	  $.get("/sfw", function(data){
-	    console.log(data);
-  })
 
-}
+
+
+// ORIGINAL JQUERY
+
+// $(document).ready(function() {
+	
+// 	// var questions;
+
+// 	$(document).on("click", "#sfw-next", getSFW);
+// 	});
+
+// 	function getSFW(){
+// 	  $.post("/sfw", function(data){
+// 	    console.log(data);
+// 	    // questions = data;
+// 	  })
+
+//   	function postSFW(){
+//   		$.ajax({
+//   			method:"POST",
+//   			url: "/sfw",
+//   			data: question
+//   		}).done(function(){
+
+//   		})
+//   	}
+
+// }

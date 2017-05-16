@@ -2,22 +2,22 @@
 {{> header}}
 <div class="container">
     <div class="row">
-<form action="api/addQuestion" method="POST" id="questions-form">
-	<label for="">Type Your Question:</label>
-    <input class="form-control" placeholder="Add a question" type="text" name="newQuestion" />
+		<form action="api/addQuestion" method="POST" id="questions-form">
+			<label for="">Type Your Question:</label>
+	    	<input class="form-control" placeholder="Add a question" type="text" name="newQuestion" />
 
-    <label for="">Is it safe for work? Type your bool!!!</label>
-    <input class="form-control SFWbutton" type="number" name="newSfw">
-
-
-    <button type="submit" class="btn btn-default addQuestionButton">Add Question</button>
-
-</form>
-
-{{>footer}}
+	    	<label for="">Is it safe for work? Type your bool!!!</label>
+	    	<input class="form-control SFWbutton" type="number" name="newSfw">
 
 
+	    	<button type="submit" class="btn btn-default addQuestionButton">Add Question</button>
+
+		</form>
+	</div> 
 </div> 
+
+{{!-- {{>footer}} --}}
+
 
 
 
