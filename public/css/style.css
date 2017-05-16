@@ -1,4 +1,4 @@
-.jumbotron { text-align:center; }
+/*.jumbotron { text-align:center; }*/
 
 body {
 	/*background styling */
@@ -15,18 +15,23 @@ body {
 }
 .title-name:hover {
 	transition: .5s ease;
-	color: rosybrown;
+	color: black;
 	text-decoration:none;
+}
+
+.title-name:hover a p.new-label:after {
+	content: 'The Card Game';
 }
 
 /* Basic stylistic look of NSFW and SWF */
 .startSFWDeck,
-.startNSFWDeck {
+.startNSFWDeck,
+.createCard  {
 
 	/*vertical-align: center;*/
 	color: lightgray;
 	transition: .5s ease;
-	text-align: center;
+	/*text-align: center;*/
 	font-size: 30px;
 	/*background-color: grey; */
 	background-color: Transparent;
@@ -34,15 +39,27 @@ body {
     text-decoration: none;
     border: none;
     cursor: pointer;
-    overflow: hidden;
+    /*overflow: hidden;*/
     outline: none;
-	height: 300px;
-	width: 450px;	
+    margin-top: 100px;
+	height: 200px;
+	/*width: 450px;*/	
+}
+
+/* Each Card gets a bar */
+.startSFWDeck {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, orange , yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, orange, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, orange, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, orange, yellow); /* Standard syntax */
+  width: 100vw;
 }
 
 /* Hover for SFW and NSFW */
 .startSFWDeck:hover,
-.startNSFWDeck:hover {
+.startNSFWDeck:hover,
+.createCard:hover  {
 
 	font-size:50px;
 	color: white;
@@ -52,41 +69,51 @@ body {
     text-decoration: none;
 }
 
+
+
 .addQuestionButton { margin-top: 10px; }
 
 .backButton { margin-top: 100px; }
 
-.createCard {
-	width: 900px;
+/*.createCard {
 	height: 100px;
-	background-color: grey;
+	background-color: white;
 	font-size: 30px; 
-}
+}*/
 
-.row {
+/*.row {
 	margin-left: 0px;
 	margin-right:0px;
-}
-
-	
-	/* ===== TITLE ANIMATIONS ===== */
-
-/* animation frames*/
-/*@keyframes pulsate {
-	0% { transform: scale(1); }
-	30% { transform: scale(1); }
-	40% { transform: scale(1.08); }
-	50% { transform: scale(1); }
-	60% { transform: scale(1); }
-	70% { transform: scale(1.05); }
-	80% { transform: scale(1); }
-	100% { transform: scale(1); }
-}
-
-.pulse {
-  	animation-name: pulsate;
-	animation-duration: 3000ms;
-	transform-origin: 70% 70%;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
 }*/
+
+/* NSFW subtext */
+
+.nsfw-subtext {
+	font-size: 20px;
+	visibility: hidden;
+	color: white;
+	/*transition: .5s ease;*/
+}
+
+.startNSFWDeck:hover .nsfw-subtext {
+  visibility: visible;
+
+  opacity: 1;
+  transition: .2s ease;
+}
+
+
+/* BRAND IMAGE ANIMATION */
+
+.logo-img {
+	height: 50px;
+	width: 50px;
+	transition: .5s ease
+}
+
+.logo-img:hover {
+	-ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+	transition: .5s ease
+}	

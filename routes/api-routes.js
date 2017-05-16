@@ -19,11 +19,11 @@ module.exports = function(app) {
   });
 
 
-  // =============================================================
-  // DELETE this comment before submitting FINAL
+
   // =============================================================
   // GET, 1 NSFW card at random, route 
-  
+  // =============================================================
+
   app.get("/api/nsfw", function(req, res) {
 
   	db.Questions.findAll({
@@ -38,13 +38,10 @@ module.exports = function(app) {
       res.json(dbQuestions); 
   	})
   });
-  
-  // =============================================================
-  // DELETE this comment before submitting FINAL
-  // =============================================================
 
-
+  // =============================================================
   // GET, 1 SFW card at random, route 
+  // =============================================================
   app.get("/api/sfw", function(req, res) {
     db.Questions.findAll({
       limit: 1,
@@ -70,7 +67,6 @@ module.exports = function(app) {
   })
 
   app.delete("/api/questions/:id", function(req, res) {
-    // We just have to specify which todo we want to destroy with "where"
     db.Questions.destroy({
       where: {
         id: req.params.id
