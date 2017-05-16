@@ -27,11 +27,6 @@ module.exports = function(app) {
   app.get("/sfw", function(req, res) {
       res.render(path.join(__dirname + "/../views/SFW.handlebars"));
     });
-  
-  // If no matching route is found default to home
-  app.use(function(req, res) {
-      res.render(path.join(__dirname, "/../views/index.handlebars"));
-    });
 
    // user route loads user.handlebars
 app.get("/login", function(req, res) {

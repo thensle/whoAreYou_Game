@@ -24,6 +24,5 @@ module.exports = function(sequelize, DataTypes) {
            timestamps: false 
         }
     );
-
     return Users;
 };

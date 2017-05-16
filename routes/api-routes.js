@@ -1,3 +1,4 @@
+// =============================================================
 // Dependencies
 // =============================================================
 
@@ -6,6 +7,10 @@ var db = require("../models");
 var User = require("../models/user.js");
 var Sequelize = require("sequelize");
 
+
+
+
+// =============================================================
 
 // Routes
 // =============================================================
@@ -18,7 +23,8 @@ module.exports = function(app) {
        })
   });
 
-//All Users API Call
+
+  //All Users API Call
   app.get("/api/users", function(req, res) {
      db.users.findAll({}).then(function(dbUsers){
          res.json(dbUsers);
@@ -26,14 +32,14 @@ module.exports = function(app) {
  });
 
   // GET NSFW route 
+
+
+
+  // =============================================================
   // GET, 1 NSFW card at random, route 
-  app.get("/nsfw", function(req, res) {
-    // creating a handlebars object
-    var hbsObject = {
-      quesObj: data
-    };
-    
-    console.log(hbsObject)
+  // =============================================================
+
+  app.get("/api/nsfw", function(req, res) {
 
   	db.Questions.findAll({
       limit: 1,
@@ -44,13 +50,14 @@ module.exports = function(app) {
           sfw: false
         } 
     }).then(function(dbQuestions){
-      res.render("nsfw", hbsObject); 
+      res.json(dbQuestions); 
   	})
   });
 
-
+  // =============================================================
   // GET, 1 SFW card at random, route 
-  app.post("/sfw", function(req, res) {
+  // =============================================================
+  app.get("/api/sfw", function(req, res) {
     db.Questions.findAll({
       limit: 1,
       order: [
@@ -60,7 +67,7 @@ module.exports = function(app) {
           sfw: true
         } 
     }).then(function(dbQuestions){
-    res.json(dbQuestions); 
+      res.json(dbQuestions); 
     })
   });
 
@@ -75,7 +82,6 @@ module.exports = function(app) {
   })
 
   app.delete("/api/questions/:id", function(req, res) {
-    // We just have to specify which todo we want to destroy with "where"
     db.Questions.destroy({
       where: {
         id: req.params.id

@@ -1,6 +1,6 @@
-.jumbotron{ text-align:center; }
+/*.jumbotron { text-align:center; }*/
 
-body{
+body {
 	/*background styling */
 	background: -webkit-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: -o-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
@@ -15,76 +15,135 @@ body{
 }
 .title-name:hover {
 	transition: .5s ease;
-	color: rosybrown;
+	color: black;
 	text-decoration:none;
+}
+
+.title-name:hover a p.new-label:after {
+	content: 'The Card Game';
 }
 
 /* Basic stylistic look of NSFW and SWF */
 .startSFWDeck,
-.startNSFWDeck {
+.startNSFWDeck,
+.createCard  {
 
 	/*vertical-align: center;*/
-	color: lightgray;
+	color: white;
 	transition: .5s ease;
-	text-align: center;
+	/*text-align: center;*/
 	font-size: 30px;
 	/*background-color: grey; */
 	background-color: Transparent;
     background-repeat: no-repeat;
+    text-decoration: none;
     border: none;
     cursor: pointer;
-    overflow: hidden;
+    /*overflow: hidden;*/
     outline: none;
-	height: 300px;
-	width: 450px;	
+    margin-top: 100px;
+	height: 200px;
+	/*width: 450px;*/	
+}
+
+/* Each Card gets a bar */
+.Deck-row-1 {
+  background: pink; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, pink, lightpink); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, pink, lightpink); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, pink, lightpink); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, pink, lightpink); /* Standard syntax */
+  /*width: 100vw;*/
+}
+
+.Deck-row-2 {
+  background: orange; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(bottom, orange, orange, #F26609); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, orange, orange, #F26609); /* For Opera 11.1 to 12.0 */
+  /background: -moz-linear-gradient(bottom, orange, orange, #F26609); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, orange, orange, orange, #ED9A25); /* Standard syntax */
+  /*width: 100vw;*/
+}
+
+.Deck-row-3 {
+  background: green; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* Standard syntax */
+  /*width: 100vw;*/
 }
 
 /* Hover for SFW and NSFW */
 .startSFWDeck:hover,
-.startNSFWDeck:hover {
+.startNSFWDeck:hover,
+.createCard:hover  {
 
 	font-size:50px;
 	color: white;
 	transition: .5s ease;
 	background-color: Transparent;
     background-repeat:no-repeat;
+    text-decoration: none;
 }
+
+
 
 .addQuestionButton { margin-top: 10px; }
 
 .backButton { margin-top: 100px; }
 
-.createCard {
-	width: 900px;
+/*.createCard {
 	height: 100px;
-	background-color: grey;
+	background-color: white;
 	font-size: 30px; 
+}*/
+
+/*.row {
+	margin-left: 0px;
+	margin-right:0px;
+}*/
+
+/* NSFW subtext */
+
+.nsfw-subtext {
+	font-size: 20px;
+	visibility: hidden;
+	color: white;
+	/*transition: .5s ease;*/
+}
+
+.startNSFWDeck:hover .nsfw-subtext {
+  visibility: visible;
+
+  opacity: 1;
+  transition: .2s ease;
+}
+
+
+
+/* BRAND IMAGE ANIMATION */
+
+.logo-img {
+	height: 50px;
+	width: 50px;
+	transition: .5s ease
+}
+
+.logo-img:hover {
+	-ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+	transition: .5s ease
+}	
+
+/* BOOTSTRAP Override */
+
+.column,
+.container { 
+  padding: 15px 0px;
 }
 
 .row {
-	margin-left: 0px;
-	margin-right:0px;
-}
-
-	
-	/* ===== TITLE ANIMATIONS ===== */
-
-/* animation frames*/
-@keyframes pulsate {
-	0% { transform: scale(1); }
-	30% { transform: scale(1); }
-	40% { transform: scale(1.08); }
-	50% { transform: scale(1); }
-	60% { transform: scale(1); }
-	70% { transform: scale(1.05); }
-	80% { transform: scale(1); }
-	100% { transform: scale(1); }
-}
-
-.pulse {
-  	animation-name: pulsate;
-	animation-duration: 3000ms;
-	transform-origin: 70% 70%;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+	margin: -20px -75px;
 }

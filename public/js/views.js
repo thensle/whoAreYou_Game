@@ -1,32 +1,29 @@
-// var path = require("path");
-
-
-
-
-
-// ORIGINAL JQUERY
-
-// $(document).ready(function() {
+$(document).ready(function() {
+	// AJAX call to get "Not safe for work" questions
+	$("#nsfw-next").on("click", function(event) {
 	
-// 	// var questions;
+		$.ajax({
+            url: "api/nsfw",
+            method: 'GET'
+        }).then(function(response) {
+            $(".nsfw-modal-body").text(response[0].question);
 
-// 	$(document).on("click", "#sfw-next", getSFW);
-// 	});
+        });
+	})
 
-// 	function getSFW(){
-// 	  $.post("/sfw", function(data){
-// 	    console.log(data);
-// 	    // questions = data;
-// 	  })
+	// AJAX call to get "Safe for Work" questions
+	$("#sfw-next").on("click", function(event) {
+	
+		$.ajax({
+            url: "api/sfw",
+            method: 'GET'
+        }).then(function(response) {
+            $(".sfw-modal-body").text(response[0].question);
+        });
+	})
 
-//   	function postSFW(){
-//   		$.ajax({
-//   			method:"POST",
-//   			url: "/sfw",
-//   			data: question
-//   		}).done(function(){
 
-//   		})
-//   	}
+});
 
-// }
+
+	
