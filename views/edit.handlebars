@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Update your question</h1>
+    <p> Currently: {{userQuestions.question}} </p>
+    <form class="" action="/api/userQuestions/{{userQuestions.id}}?_method=PUT" method="POST">
+        <input type="hidden" name="id" value="{{userQuestions.id}}">
+
+        <label for="editQuestion">Question:</label>
+        <input class="form-control" type="text" placeholder="{{userQuestions.question}}" name="editQuestion">
+
+        <br>
+
+        <label for="editSfw">Is it safe for work? Type your bool!!!</label>
+        <input class="form-control" type="number" placeholder="{{userQuestions.sfw}}" name="editSfw">
+
+        <br>
+
+        <button type="submit">Done</button>
+    </form>
+</div>

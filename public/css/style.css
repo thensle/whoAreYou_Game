@@ -23,6 +23,22 @@
 .addQuestionButton{margin-top: 10px;}
 .backButton{margin-top: 100px;}
 
+.del-btn {
+	border-radius: 7px;
+	background-color: red;
+	color: black;
+	border-color: silver;
+	height: 25px;
+	width: 30px;
+}
+.edit {
+	border-radius: 7px;
+	background-color: lightskyblue;
+	border-color: silver;
+	height: 25px;
+	width: 30px;
+}
+
 .createCard{
 	
 width:900px;
@@ -33,3 +49,17 @@ font-size: 30px;
 
 .row{margin-left: 0px;
 margin-right:0px;}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+.listed_questions {
+	border-style: solid;
+	border-width: 2px;
+	padding: 7px;
+	margin: 3px;
+	list-style: none;
+	border-radius: 17px;
+	box-shadow: 3px 3px 3px #888888;
+}

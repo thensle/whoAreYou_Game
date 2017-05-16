@@ -8,6 +8,8 @@ module.exports = function(sequelize, DataTypes) {
     }
   },
     {
+      timestamps: false,
+
       classMethod: function(models){
         userQuestions.belongsTo(models.Users, {
           foreignKey:{
@@ -18,6 +20,6 @@ module.exports = function(sequelize, DataTypes) {
     }
   );
 
-    console.log('this is user questions' + userQuestions)
+    console.log('this is user questions' + userQuestions);
     return userQuestions;
 };

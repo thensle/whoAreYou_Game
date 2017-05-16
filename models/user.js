@@ -9,10 +9,12 @@ module.exports = function(sequelize, DataTypes) {
         },
         password: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
     },
 	    {
+            timestamps: false,
+            
 	    	classMethods: {
 	    		associate: function(models){
 	    			Users.hasMany(models.userQuestions, {
