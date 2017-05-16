@@ -31,6 +31,7 @@ body {
 	/*background-color: grey; */
 	background-color: Transparent;
     background-repeat: no-repeat;
+    text-decoration: none;
     border: none;
     cursor: pointer;
     overflow: hidden;
@@ -48,6 +49,7 @@ body {
 	transition: .5s ease;
 	background-color: Transparent;
     background-repeat:no-repeat;
+    text-decoration: none;
 }
 
 .addQuestionButton { margin-top: 10px; }

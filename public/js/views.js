@@ -6,7 +6,7 @@ $(document).ready(function() {
             url: "api/nsfw",
             method: 'GET'
         }).then(function(response) {
-            $(".modal-body").text(response[0].question);
+            $(".nsfw-modal-body").text(response[0].question);
 
         });
 	})
@@ -18,7 +18,7 @@ $(document).ready(function() {
             url: "api/sfw",
             method: 'GET'
         }).then(function(response) {
-            $(".modal-body").text(response[0].question);
+            $(".sfw-modal-body").text(response[0].question);
         });
 	})
 
