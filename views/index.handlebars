@@ -5,21 +5,21 @@
 <div class="container">
     <div class="row">
         {{!-- SFW Button --}}
-        <div class="row">
-        <a ng-view="" class="col-xs-12 startSFWDeck" data-toggle="modal" data-target="#sfwModal" class="nsfw">Clean Cards</a>
+        <div class="row Deck-row-2">
+        	<a ng-view="" class="col-xs-12 startSFWDeck" data-toggle="modal" data-target="#sfwModal" class="nsfw">Clean Cards</a>
         </div>
 
 		{{!-- NSFW Button --}}
-        <div class="row">
-        <a ng-view="" class="col-xs-12 startNSFWDeck" data-toggle="modal" data-target="#nsfwModal" class="sfw">
-        	Risqué Cards 
-        	<p class="nsfw-subtext">(not for the faint of heart)</p>
-        </a>
+        <div class="row Deck-row-1">
+	        <a ng-view="" class="col-xs-12 startNSFWDeck" data-toggle="modal" data-target="#nsfwModal" class="sfw">
+	        	Risqué Cards 
+	        	<p class="nsfw-subtext">(not for the faint of heart)</p>
+	        </a>
         </div>
 
 
         {{!-- Create a Card --}}
-        <div class="row">
+        <div class="row Deck-row-3">
             <a href="createCard" class="btn btn-default col-xs-12 createCard">Create A New Card</a>
         </div>
     </div>

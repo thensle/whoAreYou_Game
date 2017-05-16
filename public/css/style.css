@@ -29,7 +29,7 @@ body {
 .createCard  {
 
 	/*vertical-align: center;*/
-	color: lightgray;
+	color: white;
 	transition: .5s ease;
 	/*text-align: center;*/
 	font-size: 30px;
@@ -47,13 +47,31 @@ body {
 }
 
 /* Each Card gets a bar */
-.startSFWDeck {
-  background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, orange , yellow); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, orange, yellow); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, orange, yellow); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, orange, yellow); /* Standard syntax */
-  width: 100vw;
+.Deck-row-1 {
+  background: pink; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, pink, lightpink); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, pink, lightpink); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, pink, lightpink); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, pink, lightpink); /* Standard syntax */
+  /*width: 100vw;*/
+}
+
+.Deck-row-2 {
+  background: orange; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(bottom, orange, orange, #F26609); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, orange, orange, #F26609); /* For Opera 11.1 to 12.0 */
+  /background: -moz-linear-gradient(bottom, orange, orange, #F26609); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, orange, orange, orange, #ED9A25); /* Standard syntax */
+  /*width: 100vw;*/
+}
+
+.Deck-row-3 {
+  background: green; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* Standard syntax */
+  /*width: 100vw;*/
 }
 
 /* Hover for SFW and NSFW */
@@ -103,6 +121,7 @@ body {
 }
 
 
+
 /* BRAND IMAGE ANIMATION */
 
 .logo-img {
@@ -117,3 +136,14 @@ body {
     transform: rotate(10deg);
 	transition: .5s ease
 }	
+
+/* BOOTSTRAP Override */
+
+.column,
+.container { 
+  padding: 15px 0px;
+}
+
+.row {
+	margin: -20px -75px;
+}
