@@ -3,14 +3,59 @@
 
 <div class="container">
     <div class="row">
-        <a href="nsfw" class="col-md-6 btn btn-default text-middle startNSFWDeck">NSFW</a>
+        {{!-- NSFW Button --}}
+        <a class="text-middle startNSFWDeck col-md-6" data-toggle="modal" data-target="#myModal" class="sfw">NSFW</a>
         
-        <a href="sfw" class="col-md-6 btn btn-default  startSFWDeck ">SFW</a>
+        {{!-- SFW Button --}}
+        <a class="text-middle col-md-6 startSFWDeck" data-toggle="modal" data-target="#myModal" class="nsfw">SFW</a>
+
         
         <div class="row">
             <a href="createCard" class="btn btn-default col-md-12 createCard">Create A Card</a>
         </div>
     </div>
+</div>
+
+{{!-- Creating the SFW Modal Card --}}
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">QUESTION:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	Hit Next to Start!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="sfw-next">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Creating the NSFW Modal Card --}}
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">QUESTION:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Hit Next to Start!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="nsfw-next">Next</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 {{!-- // This code will link your header code into the page. {{> header}} --}}

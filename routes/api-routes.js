@@ -24,13 +24,7 @@ module.exports = function(app) {
   // =============================================================
   // GET, 1 NSFW card at random, route 
   
-  app.get("/nsfw", function(req, res) {
-    // creating a handlebars object
-    // var hbsObject = {
-    //   quesObj: data
-    // };
-    
-    // console.log(hbsObject)
+  app.get("/api/nsfw", function(req, res) {
 
   	db.Questions.findAll({
       limit: 1,
@@ -41,9 +35,8 @@ module.exports = function(app) {
           sfw: false
         } 
     }).then(function(dbQuestions){
-      res.render("nsfw", hbsObject); 
+      res.json(dbQuestions); 
   	})
-    console.log('before the nsfw get request goes off.')
   });
   
   // =============================================================
@@ -52,7 +45,7 @@ module.exports = function(app) {
 
 
   // GET, 1 SFW card at random, route 
-  app.post("/sfw", function(req, res) {
+  app.get("/api/sfw", function(req, res) {
     db.Questions.findAll({
       limit: 1,
       order: [
@@ -62,7 +55,7 @@ module.exports = function(app) {
           sfw: true
         } 
     }).then(function(dbQuestions){
-    res.json(dbQuestions); 
+      res.json(dbQuestions); 
     })
   });
 
