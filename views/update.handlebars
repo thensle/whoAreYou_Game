@@ -2,19 +2,39 @@
 {{> header}}
 <div class="container">
     <div class="row">
-		<form action="api/addQuestion" method="POST" id="questions-form">
-			<label for="">Type Your Question:</label>
-	    	<input class="form-control" placeholder="Add a question" type="text" name="newQuestion" />
+        <h3> Add a question </h3>
+        <form action="api/addQuestion" method="POST" id="questions-form">
+            <label for="">Type Your Question:</label>
+            <input class="form-control" placeholder="Add a question" type="text" name="newQuestion" />
 
-	    	<label for="">Is it safe for work? Type your bool!!!</label>
-	    	<input class="form-control SFWbutton" type="number" name="newSfw">
+            <label for="">Is it safe for work? Type your bool!!!</label>
+            <input class="form-control SFWbutton" type="number" name="newSfw">
 
 
-	    	<button type="submit" class="btn btn-default addQuestionButton">Add Question</button>
+            <button type="submit" class="btn btn-default addQuestionButton">Add Question</button>
 
-		</form>
-	</div> 
-</div> 
+        </form>
+    </div>
+
+    <div class="row">
+        <h3> All of your current questions </h3>
+
+        <ul>
+            {{#each userQuestions}}
+                <li class="listed_questions">
+                    <form action="/api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="id" value="{{this.id}}">
+                        <p> Question: {{this.question}} </p>
+                        <button class="del-btn glyphicon glyphicon-remove" type="submit"></button>
+                    </form>
+                    
+                    <button class="edit"><a class="glyphicon glyphicon-pencil" href="/edit/{{this.id}}"></a></button>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+{{>footer}}
 
 {{!-- {{>footer}} --}}
 

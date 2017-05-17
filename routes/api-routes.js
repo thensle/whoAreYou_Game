@@ -24,7 +24,15 @@ module.exports = function(app) {
   });
 
 
+
   //All Users API Call
+   app.get("/api/userQuestions", function(req, res) {
+     db.userQuestions.findAll({}).then(function(dbQuestions){
+         res.json(dbQuestions);
+     })
+ });
+
+//All Users API Call
   app.get("/api/users", function(req, res) {
      db.users.findAll({}).then(function(dbUsers){
          res.json(dbUsers);
@@ -73,23 +81,50 @@ module.exports = function(app) {
 
 
   app.post("/api/addQuestion", function(req,res){
+    console.log(req.body);
   	db.Questions.create({
   		question: req.body.newQuestion, 
   		sfw: req.body.newSfw
-  	}).then(function(dbQuestions){
+  	}).then(function(dbQuestions){  
   		res.json(dbQuestions); 
   	})
   })
 
-  app.delete("/api/questions/:id", function(req, res) {
-    db.Questions.destroy({
+
+  // app.delete("/api/questions/:id", function(req, res) {
+  //   db.Questions.destroy({
+
+  app.put("/api/userQuestions/:id", function(req, res) {
+    // We just have to specify which todo we want to destroy with "where"
+    // console.log("/api/userQuestions/" + req.params.id);
+    // console.log("req id " + req.body.id);
+    // console.log("req question " + req.body.editQuestion);
+    // console.log("req sfw " + req.body.editSfw);
+    db.userQuestions.update(
+      {
+        question: req.body.editQuestion,
+        sfw: req.body.editSfw
+      },
+      {
       where: {
         id: req.params.id
+        // this may need to have the userID somewhere here?
       }
     }).then(function(dbQuestions) {
-      res.json(dbQuestions);
+      res.redirect("/createCard");
     });
+  });
 
+  app.delete("/api/userQuestions/:id", function(req, res) {
+    // We just have to specify which todo we want to destroy with "where"
+    db.userQuestions.destroy({
+      where: {
+        id: req.params.id
+        // this may need to have the userID somewhere here?
+      }
+    }).then(function(dbQuestions) {
+      res.redirect("/createCard");
+    });
   });
 
 //After user is validated

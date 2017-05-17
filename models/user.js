@@ -9,9 +9,10 @@ module.exports = function(sequelize, DataTypes) {
         },
         password: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
     },
+
         {
             classMethods: {
                 associate: function(models){
@@ -21,7 +22,7 @@ module.exports = function(sequelize, DataTypes) {
                 }
             },
 
-           timestamps: false 
+            timestamps: false 
         }
     );
     return Users;
