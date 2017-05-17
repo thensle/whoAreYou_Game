@@ -47,30 +47,32 @@ body {
 }
 
 /* Each Card gets a bar */
-.Deck-row-1 {
-  background: pink; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, pink, lightpink); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, pink, lightpink); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, pink, lightpink); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, pink, lightpink); /* Standard syntax */
-  /*width: 100vw;*/
-}
-
-.Deck-row-2 {
+.Deck-row-1 {  
   background: orange; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(bottom, orange, orange, #F26609); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom, orange, orange, #F26609); /* For Opera 11.1 to 12.0 */
-  /background: -moz-linear-gradient(bottom, orange, orange, #F26609); /* For Firefox 3.6 to 15 */
+  background: -moz-linear-gradient(bottom, orange, orange, #F26609); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom, orange, orange, orange, #ED9A25); /* Standard syntax */
   /*width: 100vw;*/
+ 
+}
+
+.Deck-row-2 {
+  background: aqua; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #0099cc, #0099cc, #0099cc, #4169b0); /* Standard syntax */
+  /*width: 100vw;*/
+
 }
 
 .Deck-row-3 {
-  background: green; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, #0080c4, #0080c4, #0080c4, #4169b0); /* Standard syntax */
+  background: pink; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(bottom, pink, #eb7f88); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, pink, #eb7f88); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, pink, #eb7f88); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, pink, #eb7f88); /* Standard syntax */
   /*width: 100vw;*/
 }
 
@@ -164,13 +166,13 @@ body {
 	height: 25px;
 	width: 30px;
 }
-
+/*
 .createCard {
 	width:900px;
 	height: 100px;
 	background-color: grey;
 	font-size: 30px; 
-}
+}*/
 
 .row {
 	margin-left: 0px;
