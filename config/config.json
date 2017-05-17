@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "t4rut4ru",
+    "password": "pu55ypause!",
     "database": "question_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

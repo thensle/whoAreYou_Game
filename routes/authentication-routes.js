@@ -3,16 +3,7 @@ var db = require("../models");
 var User = require("../models/user.js");
 var Sequelize = require("sequelize");
 
-//Global Variables
-var templateQuestions = [];
-
-//Run this code after confirmation of new user created...
-
-app.get("/create", function(req, res) {
- db.Questions.findAll({}).then(function(dbQuestions){
-     templateQuestions = JSON.stringify(dbQuestions);
- })
-});
+////
 
 app.post("/:id/manage", function(req, res){
 	db.users.findOne({ 
