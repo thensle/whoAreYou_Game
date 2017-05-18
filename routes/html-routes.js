@@ -6,10 +6,14 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
-
-  // index route loads index.handlebars
+  // user route loads user.handlebars
   app.get("/", function(req, res) {
     res.render(path.join(__dirname + "/../views/index.handlebars"));
+  });
+
+  // id/game route loads game.handlebars
+  app.get("/:id/game", function(req, res) {
+    res.render(path.join(__dirname + "/../views/game.handlebars"));
   });
 
   // user route loads user.handlebars
@@ -29,7 +33,7 @@ module.exports = function(app) {
     })
   });
 
-  app.get("/createCard", function(req, res) {
+  app.get("/:id/update", function(req, res) {
     // We just have to specify which todo we want to destroy with "where"
     db.userQuestions.findAll({
     }).then(function(dbQuestions) {
@@ -44,10 +48,5 @@ module.exports = function(app) {
   app.get("/sfw", function(req, res) {
       res.render(path.join(__dirname + "/../views/SFW.handlebars"));
     });
-
-   // user route loads user.handlebars
-  app.get("/login", function(req, res) {
-    res.render(path.join(__dirname + "/../views/login.handlebars"));
-  });
 
 };

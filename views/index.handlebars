@@ -1,78 +1,11 @@
-
 {{> header}}
 
+<form class= "createUserForm" action="/newUser" method="POST">
 
-<div class="container">
-    <div class="row">
-        {{!-- SFW Button --}}
-        <div class="row Deck-row-1">
-        	<a ng-view="" class="col-xs-12 startSFWDeck" data-toggle="modal" data-target="#sfwModal" class="nsfw">Clean Cards</a>
-        </div>
+   <label for="">Email</label>
+   <input class="form-control userEmail" placeholder="Enter your email" type="text" name="userEmail"/>
+   <input class="form-control userPassword" placeholder="Create your password" type="text" name="userPassword"/>
 
-		{{!-- NSFW Button --}}
-        <div class="row Deck-row-2">
-	        <a ng-view="" class="col-xs-12 startNSFWDeck" data-toggle="modal" data-target="#nsfwModal" class="sfw">
-	        	Risqué Cards 
-	        	<p class="nsfw-subtext">(not for the faint of heart)</p>
-	        </a>
-        </div>
+<button action= type="submit" class="btn btn-default registerButton">Log in</button>
 
-
-        {{!-- Create a Card --}}
-        <div class="row Deck-row-3">
-            <a href="createCard" class="btn btn-default col-xs-12 createCard">Create A New Card</a>
-        </div>
-    </div>
-</div>
-
-
-{{!-- ===================================================== --}}
-{{!-- Creating the SFW Modal Card --}}
-{{!-- ===================================================== --}}
-<div class="modal fade" id="sfwModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">These cards are safe</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="sfw-modal-body">
-      	Hit Next to Start!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="sfw-next">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-{{!-- ===================================================== --}}
-{{!-- Creating the NSFW Modal Card --}}
-{{!-- ===================================================== --}}
-<div class="modal fade" id="nsfwModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">These cards are NOT safe for work!!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="nsfw-modal-body">
-        Hit Next to Start!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="nsfw-next">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-{{!-- // This code will link your header code into the page. {{> header}} --}}
-
-
-
+</form>

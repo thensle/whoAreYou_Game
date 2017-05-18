@@ -66,14 +66,15 @@ module.exports = function(app) {
   // GET, 1 SFW card at random, route 
   // =============================================================
   app.get("/api/sfw", function(req, res) {
-    db.Questions.findAll({
+    db.userQuestions.findAll({
       limit: 1,
       order: [
         [Sequelize.fn('RAND')]
       ],
         where: {
-          sfw: true
-        } 
+          sfw: true,
+          userId: req.params.id
+        }
     }).then(function(dbQuestions){
       res.json(dbQuestions); 
     })
@@ -111,7 +112,8 @@ module.exports = function(app) {
         // this may need to have the userID somewhere here?
       }
     }).then(function(dbQuestions) {
-      res.redirect("/createCard");
+      dbQuestions.dataValues.UserId
+      res.redirect("/:id/update");
     });
   });
 
@@ -123,7 +125,7 @@ module.exports = function(app) {
         // this may need to have the userID somewhere here?
       }
     }).then(function(dbQuestions) {
-      res.redirect("/createCard");
+      res.redirect(dbQuestions.dataValues.UserId+"/update");
     });
   });
 
@@ -133,7 +135,8 @@ module.exports = function(app) {
       email: req.body.userEmail, 
       password: req.body.userPassword
     }).then(function(newUser){
-      res.json(newUser);
+      //res.json(newUser);  
+      res.redirect(newUser.id+"/game");
       createQuestions(newUser);
     })
   });
@@ -182,15 +185,3 @@ module.exports = function(app) {
 
  };
 };
-
- //Login an existing user
-
- // app.post("/login", function(req,res){
- //    var userEmail = req.body.userEmail;
- //    var userPassword = req.body.userPassword;
-
-
- //    }).then(function(data){
- //      app.redirect(/)
- //    })
- //  });
