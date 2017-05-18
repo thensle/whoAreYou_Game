@@ -129,11 +129,25 @@ module.exports = function(app) {
 
 //After user is validated
   app.post("/newUser", function(req, res){
+    var email = req.body.userEmail; 
+    var password = req.body.userPassword;
+
+    db.Users.findAll().then(function(allUsers){
+      for (var i = 0; i < allUsers.length; i++){
+        
+        if(allUsers[i].dataValues.email === email){
+          //Need Error message for existing user
+          console.log("It appears you have already registered");
+          res.redirect("/");
+        };
+      };
+
+    });
+
     db.Users.create({
       email: req.body.userEmail, 
       password: req.body.userPassword
     }).then(function(newUser){
-      res.json(newUser);
       createQuestions(newUser);
     })
   });
@@ -179,9 +193,31 @@ module.exports = function(app) {
       });
     });
  
+app.post("/loginUser", function(req, res){
+    var email = req.body.userEmail; 
+    var password = req.body.userPassword;
 
+    db.Users.findAll().then(function(allUsers){
+      for (var i = 0; i < allUsers.length; i++){
+        
+        if(allUsers[i].dataValues.email === email){
+          
+          if(allUsers[i].dataValues.password === password){
+            //User experience - alert of login
+            res.redirect("/");
+          } else {
+            //Alert user of password mismatch
+            console.log("Password mismatch");
+          };
+        };
+      };
+        
+    });
+  });
  };
 };
+
+
 
  //Login an existing user
 

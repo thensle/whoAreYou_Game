@@ -50,4 +50,8 @@ module.exports = function(app) {
     res.render(path.join(__dirname + "/../views/login.handlebars"));
   });
 
+  app.get("/register", function(req, res) {
+    res.render(path.join(__dirname + "/../views/register.handlebars"));
+  });
+
 };
