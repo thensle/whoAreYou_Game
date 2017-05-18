@@ -1,149 +1,164 @@
 -- NSFW 0
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been arrested", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever sharted", 0);
-INSERT INTO questions (question, sfw) VALUES ("Have you ever thought of your teacher sexually", 0);
-INSERT INTO questions (question, sfw) VALUES ("Have you ever smelled someone else's hair", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever licked a pair of balls", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever skinny dipped", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever slept with someone on the first date", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever made out with someone of the same sex", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been caught while masturbating", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been in an orgy", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been in a threesome", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever cheated on your girlfriend", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I gotten black out drunk", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever driven drunk", 0)
-INSERT INTO questions (question, sfw) VALUES ("I've had sex in a public place... more than once", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever seen my best friend naked", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever masturbated in public", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever used marijuana", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever cocaine", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever lsd", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever acid", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever heroin", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever got someone to buy me beer when I was underage", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever smoked cigarettes", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever voted in an election", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever peed in public", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever stolen from my place of work", 0)
-INSERT INTO questions (question, sfw) VALUES ("I've been on more than one drug at once", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever gotten road head", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever got into a fight", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever streamed pornography", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever found a family member attractive...sexually", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever put a finger in my butthole", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been on the inside of a jail cell", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever broke into a building", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been mugged", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever picked my nose", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever drank alcohol off of a girls stomach", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever shat into a bag, set it on fire, and put it on someone's porch... never?", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever put more than 3 fingers in someone's vagina", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever seen a fleshlight... what's a fleshlight?", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever graduated from highschool", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever graduated from college", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever graduated", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever seen a bum masturbate", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I had sex with my crush", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been on top of a car", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been broke", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I walked in on my parents", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever bathed in a fountain", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I had sex... period", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I stopped thinking about my ex", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I had a blowjob", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never has anyone touched my privates", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been eaten out", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever given birth", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I had sex with someone twice my age", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever walked around my place naked", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I had down syndrome", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever looked so deeply into your eyes I came..actually I just came", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been married", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been divorced", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever had two parents", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever licked a human eyeball", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever said the word nig... yeah that word", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I gone commando", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever said fuck you to my boss", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever shot a gun", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever shot a 50 caliber rifle", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever wore a dress", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I worn a pair of panties", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever had a handjob", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever licked an animal", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I had a penis", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever peed on myself", 0)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever came on myself", 0);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever worn a wig", 0)
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been arrested?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever sharted?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever thought of your teacher sexually?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever smelled someone else's hair?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever licked someone's balls?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever skinny dipped?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever slept with someone on the first date?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever made out with someone of the same sex?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been caught while masturbating?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been in an orgy?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been in a threesome?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever cheated on your significant other?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been black-out drunk?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever drove drunk?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever had sex in a public place?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever seen your best friend naked?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever masturbated in public?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever used marijuana?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever used cocaine?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever used lsd?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever used acid?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever used heroin?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever got someone to buy you beer when you were underage? How?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever smoked cigarettes?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever peed in public?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever stolen from a job?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been on more than one drug at once?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever received road head? Have you ever given road head?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever got into a fight?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever streamed pornography?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever found a family member attractive?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever had a finger in your butthole?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been on the inside of a jail cell?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever broke into a building?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been mugged?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever picked your nose?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever drank alcohol off of someone's stomach?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever pooped into a bag, set it on fire, and put it on someone's porch?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever had anal sex?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever used a fleshlight?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever graduated from highschool?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever graduated from college?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever seen a stranger masturbate?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever had sex with a crush?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been broke?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever walked in on your parents having relations?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever bathed in a fountain?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever had sex?", 0);
+INSERT INTO questions (question, sfw) VALUES ("What is your most embarrassing sex story?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Do you ever think about an ex?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever had oral sex?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever had sex with someone twice your age?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever walked around your house/apartment naked?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been married?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been divorced?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever licked a human eyeball? A non-human eyeball?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever used a racial slur?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever gone commando?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever told your boss to go screw?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been shot?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever cross dressed?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever wore a pair of the opposite genders underwear?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever received a handjob? Have you ever given a handjob?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever drank so much you vomited? Did you keep drinking after?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever peed on yourself?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever ejaculated on yourself?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever not given money to someone even though you could have?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been handcuffed?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been spanked as an adult? Did you like it?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever fantasized about someone else during sex?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever faked an orgasm?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever lied to get someone to date you? To have sex with you...?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever lied to get a job?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever stolen anything?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Would you ever sleep with the person(s) you are playing this with?", 0);
+INSERT INTO questions (question, sfw) VALUES ("What is one of your sexual fantasies?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Where's the most embarrassing place you farted?", 0);
+INSERT INTO questions (question, sfw) VALUES ("What's the worse thing you would do for money?", 0);
+INSERT INTO questions (question, sfw) VALUES ("What's the meanest thing you ever did/said to someone else?", 0);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever taken pictures or recorded yourself naked? Having sexual relations?", 0);
 
 --SFW 1
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever eaten a ham sandwich", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever worn a dress", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever cut my own hair", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever driven my own car", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever worried about my weight", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever I’ve gone more than 3 days without showering", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been to Disney World/Disney Land", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever cheated in school", 1);
-INSERT INTO questions (question, sfw) VALUES ("I've eaten cereal with something other than milk or water", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever check my car's oil", 1)
-INSERT INTO questions (question, sfw) VALUES ("I've traveled to more than 5 countries", 1)
-INSERT INTO questions (question, sfw) VALUES ("I've driven on the wrong side of the road", 1)
-INSERT INTO questions (question, sfw) VALUES ("I've drank from a source of dirty water", 1)
-INSERT INTO questions (question, sfw) VALUES ("I've lied to my boss to get the day off", 1)
-INSERT INTO questions (question, sfw) VALUES ("I've cheated on a class final", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ridden a horse", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever went skydiving", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever went on a blind date", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever wrote a love letter to a crush", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever kept a diary", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been to the circus", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever seen the ocean", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever juggled", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever rode a scooter", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever rode a jet ski", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever was a boy scout/girl scout", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever learned how to dance", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever put ketchup on a hotdog", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever had a dog", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever had a cat", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever made a painting", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been to a baseball game", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been to a professional soccer game", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been to a basketball game", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever danced in public", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever sang karoke", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever wore makeup", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I drank from a fountain", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever bathed for more than an hour", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever watched someone else's pet", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever seen anime", 1)
-INSERT INTO questions (question, sfw) VALUES ("I've never learned to draw", 1)
-INSERT INTO questions (question, sfw) VALUES ("I can play the an instrument", 1)
-INSERT INTO questions (question, sfw) VALUES ("I'm an awesome singer", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever hydroplaned", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever played the piano", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever copied someone else code", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever worked at place for more than a year", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I dreamed about going to the moon", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been on a plane", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I spoke spanish", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever played a questions game before", 1);
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever eaten a bug", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever read more than 3 books", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever read a newspaper all the way through", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever been in a government building", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever worn a blanket as a cape", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I joined the military", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I used skype", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I used instagram", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I used snapchat", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I spoke french", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I laughed at a bad joke", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever played videogames", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I played magic the gathering the card game", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever pet a cow", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I slept under the stars", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever flown a plane", 1)
-INSERT INTO questions (question, sfw) VALUES ("Never have I ever went to a festival", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever worn a wig?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Are your parents still married?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever shot a gun?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever eaten a ham sandwich?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever cut your own hair?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Can you drive a car?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever worried about weight?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever gone more than 3 days without showering?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been to Disney World/Disney Land? How many times?", 1);
+INSERT INTO questions (question, sfw) VALUES ("What is your dream travel destination?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever cheated in school?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever eaten cereal with something other than milk or water? Why?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever checked your car's oil?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever driven on the wrong side of the road? Illegally?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever lied to a boss to get the day off?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever rode a horse?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever rode a bike?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever went skydiving?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever went on a blind date?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever wrote a love letter to a crush?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever kept a diary/journal?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever used an online dating service?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been to the circus?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever seen an ocean?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Can you juggle? Have you tried?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Are you afraid of clowns?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever rode a scooter?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever rode a jet ski?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Were you ever a boy/girl scout?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever taken dance lessons?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever put ketchup on a hotdog? Are you from Chicago?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever had a dog?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever had a cat?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever painted?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been to a baseball game?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been to a soccer game?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been to a basketball game?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever danced in public?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever sang karoke? What is your song?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever wore makeup?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever bathed for more than an hour?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever watched someone else's pet?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever watched an anime?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Do you draw?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Do you play an instrument?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Do you sing?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Do you have any tattoos or piercings?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever copied someone else's code?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever worked at place for more than a year?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever dreamed about going to the moon? Somewhere else in space?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever flown on a plane?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever flown a plane?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been on a cruise?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Can you speak another language?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever played Never Have I Ever? Truth or Dare? Spin the Bottle?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever eaten a bug? On purpose?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Do you like to read? Reading anything now?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever read a newspaper all the way through?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever worn a blanket as a cape?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever served in the military?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever used skype?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever used instagram?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever used snapchat?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever you laughed at a bad joke?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Do you like to play videogames? Board games? Card games? Games?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever played magic the gathering the card game?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever pet a cow?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever you slept under the stars?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been to a festival? Which one(s)?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever voted in an election?", 1);
+INSERT INTO questions (question, sfw) VALUES ("What is something that scares you?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever volunteered?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Do you like comic books? Do you like comic book movies?", 1);
+INSERT INTO questions (question, sfw) VALUES ("What do you like to do to relax?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been camping?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever gone fishing?", 1);
+INSERT INTO questions (question, sfw) VALUES ("What was the last song/band you listened to?", 1);
+INSERT INTO questions (question, sfw) VALUES ("What is your dream job?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Do you know how to swim?", 1);
+INSERT INTO questions (question, sfw) VALUES ("Have you ever been ice skating?", 1);
+INSERT INTO questions (question, sfw) VALUES ("What are your top 5 favorite movies?", 1);
