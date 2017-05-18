@@ -18,7 +18,7 @@ ul {
 
 /* background styling */
 .view-port {
-	position: fixed;
+	/*position: fixed;*/
 	float: left;
   	background-size: cover;
 	width: 100vw;
@@ -75,35 +75,7 @@ ul {
     text-decoration: none;
 }
 
-/* Each Card gets a background */
-.Deck-row-1 {  
-  background: orange; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(bottom, orange, orange, #F26609); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom, orange, orange, #F26609); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom, orange, orange, #F26609); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, orange, orange, orange, #ED9A25); /* Standard syntax */
-  /*width: 100vw;*/
- 
-}
 
-.Deck-row-2 {
-  background: aqua; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, #0099cc, #0099cc, #0099cc, #4169b0); /* Standard syntax */
-  /*width: 100vw;*/
-
-}
-
-.Deck-row-3 {
-  background: pink; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(bottom, pink, #eb7f88); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom, pink, #eb7f88); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom, pink, #eb7f88); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, pink, #eb7f88); /* Standard syntax */
-  /*width: 100vw;*/
-}
 
 .addQuestionButton { margin-top: 10px; }
 
@@ -170,8 +142,6 @@ ul {
 	text-align: center;
 	height: 500px;
 	width: 400px;
-	/*border-radius: 10px;*/
-	/*border-radius: 20px;*/
 }
 
 #swfModalLabel {
@@ -222,6 +192,10 @@ ul {
 	width: 30px;
 }
 
+
+.modal-backdrop {
+	
+}
 /*.row {
 	margin-left: 0px;
 	margin-right:0px;
