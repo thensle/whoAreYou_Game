@@ -4,22 +4,22 @@
 <div class="container">
     <div class="row">
         {{!-- SFW Button --}}
-        <div class="row Deck-row-1">
-        	<a ng-view="" class="col-xs-12 startSFWDeck" data-toggle="modal" data-target="#sfwModal" class="nsfw">Clean Cards</a>
+        <div class="row col-md-3 sfw-deck">
+        	<a ng-view="" class="col-xs-12 startSFWDeck" data-toggle="modal" data-target="#sfwModal" class="nsfw">Safe<br>Cards</a>
         </div>
 
 		{{!-- NSFW Button --}}
-        <div class="row Deck-row-2">
+        <div class="row col-md-3 nsfw-deck">
 	        <a ng-view="" class="col-xs-12 startNSFWDeck" data-toggle="modal" data-target="#nsfwModal" class="sfw">
-	        	Risqué Cards 
+	        	Risqué<br>Cards 
 	        	<p class="nsfw-subtext">(not for the faint of heart)</p>
 	        </a>
         </div>
 
 
         {{!-- Create a Card --}}
-        <div class="row Deck-row-3">
-            <a href="/:id/update" class="btn btn-default col-xs-12 createCard">View/Update your cards</a>
+        <div class="row col-md-3 update-deck">
+            <a href="/:id/update" class="btn btn-default col-xs-12 createCard">Update<br>Cards</a>
         </div>
     </div>
 </div>
