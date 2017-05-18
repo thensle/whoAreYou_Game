@@ -20,7 +20,7 @@
 
         {{!-- Create a Card --}}
         <div class="row Deck-row-3">
-            <a href="createCard" class="btn btn-default col-xs-12 createCard">Create A New Card</a>
+            <a href="createCard" class="{{!-- btn btn-default --}} col-xs-12 createCard">Create A New Card</a>
         </div>
     </div>
 </div>
@@ -29,11 +29,11 @@
 {{!-- ===================================================== --}}
 {{!-- Creating the SFW Modal Card --}}
 {{!-- ===================================================== --}}
-<div class="modal fade" id="sfwModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="sfwModal" tabindex="-1" role="dialog" aria-labelledby="sfwModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">These cards are safe</h5>
+    <div class="modal-content modal-content-sfw">
+      <div class="modal-header modal-header-sfw">
+        <h5 class="modal-title" id="swfModalLabel">Safe Cards</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -41,7 +41,7 @@
       <div class="sfw-modal-body">
       	Hit Next to Start!
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer modal-footer-sfw">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" id="sfw-next">Next</button>
       </div>
@@ -52,11 +52,11 @@
 {{!-- ===================================================== --}}
 {{!-- Creating the NSFW Modal Card --}}
 {{!-- ===================================================== --}}
-<div class="modal fade" id="nsfwModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="nsfwModal" tabindex="-1" role="dialog" aria-labelledby="nsfwModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">These cards are NOT safe for work!!</h5>
+    <div class="modal-content modal-content-nsfw">
+      <div class="modal-header modal-header-nsfw">
+        <h5 class="modal-title" id="nsfwModalLabel">These cards are NOT safe for work!!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -64,7 +64,7 @@
       <div class="nsfw-modal-body">
         Hit Next to Start!
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer modal-footer-nsfw">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" id="nsfw-next">Next</button>
       </div>

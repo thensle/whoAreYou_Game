@@ -1,22 +1,32 @@
 /*.jumbotron { text-align:center; }*/
 
+/* ----- UNIVERSAL OVERRIDE ----- */
 body {
 	/*background styling */
 	background: -webkit-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: -o-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: linear-gradient(51deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-	height: 100vw;
-	text-align: center;
+	/*height: 100vw;*/
+	/*text-align: center;*/
+}
+
+
+ul {
+	margin: 0px;
+	padding: 0px;
 }	
+/* ------------ */
+/* ------------ */
+
 
 .title-name {
 	transition: .5s ease;
-	color: tomato;
+	/*color: tomato;*/
 }
 .title-name:hover {
 	transition: .5s ease;
 	color: black;
-	text-decoration:none;
+	text-decoration: none;
 }
 
 .title-name:hover a p.new-label:after {
@@ -31,19 +41,32 @@ body {
 	/*vertical-align: center;*/
 	color: white;
 	transition: .5s ease;
-	/*text-align: center;*/
+	text-align: center;
 	font-size: 30px;
-	/*background-color: grey; */
 	background-color: Transparent;
     background-repeat: no-repeat;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    /*overflow: hidden;*/
+    border-radius: 100px;
     outline: none;
     margin-top: 100px;
 	height: 200px;
 	/*width: 450px;*/	
+}
+
+/* Hover for SFW and NSFW */
+.startSFWDeck:hover,
+.startNSFWDeck:hover,
+.createCard:hover  {
+
+	font-size:50px;
+	color: white;
+	/*margin-top: 150px;*/
+	transition: .5s ease;
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    text-decoration: none;
 }
 
 /* Each Card gets a bar */
@@ -76,43 +99,17 @@ body {
   /*width: 100vw;*/
 }
 
-/* Hover for SFW and NSFW */
-.startSFWDeck:hover,
-.startNSFWDeck:hover,
-.createCard:hover  {
-
-	font-size:50px;
-	color: white;
-	transition: .5s ease;
-	background-color: Transparent;
-    background-repeat:no-repeat;
-    text-decoration: none;
-}
-
-
-
 .addQuestionButton { margin-top: 10px; }
 
 .backButton { margin-top: 100px; }
 
-/*.createCard {
-	height: 100px;
-	background-color: white;
-	font-size: 30px; 
-}*/
-
-/*.row {
-	margin-left: 0px;
-	margin-right:0px;
-}*/
-
-/* NSFW subtext */
+/* ----- NSFW subtext ----- */
 
 .nsfw-subtext {
 	font-size: 20px;
 	visibility: hidden;
 	color: white;
-	/*transition: .5s ease;*/
+	transition: .5s ease;
 }
 
 .startNSFWDeck:hover .nsfw-subtext {
@@ -123,8 +120,7 @@ body {
 }
 
 
-
-/* BRAND IMAGE ANIMATION */
+/* ----- Brand Image Animation ----- */
 
 .logo-img {
 	height: 50px;
@@ -139,7 +135,7 @@ body {
 	transition: .5s ease
 }	
 
-/* BOOTSTRAP Override */
+/* ----- BOOTSTRAP Override ----- */
 
 .column,
 .container { 
@@ -149,6 +145,59 @@ body {
 .row {
 	margin: -20px -75px;
 }
+
+
+/* ----- MODAL override ----- */
+
+/* ----- sfw Modal ----- */ 
+
+.modal-header-sfw,
+.sfw-modal-body,
+.modal-footer-sfw {
+	border: none;
+
+}
+
+.modal-content-sfw {
+	background-color: orange;
+	border-radius: 20px;
+	text-align: center;
+	height: 500px;
+	width: 400px;
+	/*border-radius: 10px;*/
+	/*border-radius: 20px;*/
+}
+
+#swfModalLabel {
+	font-size: 30px;
+}
+
+
+/* ----- nsfw Modal ----- */
+
+.modal-header-nsfw,
+.nsfw-modal-body,
+.modal-footer-nsfw {
+	border: none;
+
+}
+
+.modal-content-nsfw {
+	background-color: #0099cc;
+	text-align: center;
+	color: white;
+	height: 500px;
+	width: 400px;
+	/*border-radius: 10px;*/
+	/*border-radius: 20px;*/
+}
+
+#nsfwModalLabel {
+	font-size: 30px;
+}
+
+
+/* ----- Create a Card ----- */
 
 .del-btn {
 	border-radius: 7px;
@@ -166,23 +215,12 @@ body {
 	height: 25px;
 	width: 30px;
 }
-/*
-.createCard {
-	width:900px;
-	height: 100px;
-	background-color: grey;
-	font-size: 30px; 
-}*/
 
-.row {
+/*.row {
 	margin-left: 0px;
 	margin-right:0px;
-}
+}*/
 
-ul {
-	margin: 0px;
-	padding: 0px;
-}
 
 .listed_questions {
 	border-style: solid;
