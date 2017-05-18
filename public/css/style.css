@@ -105,7 +105,6 @@ ul {
 .sfw-deck,
 .nsfw-deck,
 .update-deck {  
-	text-shadow: 1px 1px black;
 	padding: 20px;
 	margin: 0px 20px;
 	border-radius: 10px;
@@ -117,6 +116,7 @@ ul {
 }
 
 .sfw-deck {
+	text-shadow: 1px 0px 0px yellow, 0 0 10em black, 0 0 0.1em black;
 	background-image: url("/images/sfw-fruits.jpg");
 		/* For browsers that do not support gradients */
 	/*background: orange; */
@@ -131,6 +131,7 @@ ul {
 }
 
 .nsfw-deck {
+	text-shadow: 1px 0px 0px black, 0 0 10em black, 0 0 0.1em black;
 	background-image: url("/images/nsfw-peppers.jpg");
 		/* For browsers that do not support gradients */
 	/*background: aqua;*/
@@ -146,6 +147,7 @@ ul {
 }
 
 .update-deck {
+	text-shadow: 1px 0px 0px black, 0 0 10em tomato, 0 0 0.1em black;
 		/* For browsers that do not support gradients */
 	/*background: pink; */
 		/* For Safari 5.1 to 6.0 */
