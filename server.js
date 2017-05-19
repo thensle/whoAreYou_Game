@@ -38,7 +38,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // =============================================================
-// Routes
+// Passport
 // ============================================================
 
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
