@@ -38,8 +38,8 @@
                         <form action="/api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
                             <input type="hidden" name="id" value="{{this.id}}">
                             <p> Question: {{this.question}}</p>
-                            <button class="del-btn glyphicon glyphicon-remove" type="submit"></button>
-                            <button class="edit"><a class="glyphicon glyphicon-pencil" href="/edit/{{this.id}}"></a></button>
+                            <button class="btn btn-info glyphicon glyphicon-pencil"><a href="/edit/{{this.id}}"></a></button>
+                            <button class="btn btn-danger glyphicon glyphicon-remove" type="submit"></button>
                         </form>
                         
 
