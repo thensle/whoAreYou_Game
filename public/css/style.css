@@ -24,9 +24,8 @@ ul {
 	padding: 0px;
 }
 
-/* background styling */
+/* ----- background styling ----- */
 .view-port {
-	/*position: fixed;*/
 	float: left;
   	background-size: cover;
 	width: 100vw;
@@ -61,7 +60,7 @@ ul {
 	text-align:center;
 }
 
-/* ----- Update Page: In Parallax Mode; ----- */
+/* ----- Update Page: In Parallax Mode ----- */
 .bg-long {
 	height: 600px;  
 	background: url('/images/bg-header-1 copy.jpg');
@@ -73,31 +72,45 @@ ul {
 }
 
 .scroll-long {
-	display: inline-block;
-	width: 1920px;
-	margin: 0px -150px;
-	background-color: tomato;
-	text-align:center;
+	width: 100vw;
+	background-color: #78668E;
+	
 }
 
+
+.listed-questions {
+	display: inline-block;
+	width: 100vw;
+	width: 30vw;
+	margin: 10px;
+	border-radius: 17px;
+	box-shadow: 3px 3px 3px black;
+	
+	background-color: tomato;
+	text-align: center;
+	vertical-align: text-top;
+	list-style: none;
+	
+}
 
 /* ----- Basic stylistic look of NSFW and SWF ----- */
 .startSFWDeck,
 .startNSFWDeck,
 .updateCardDeck {
-	color: white;
+	margin-top: 100px;
+	height: 200px;
 	transition: .5s ease;
-	text-align: center;
 	font-size: 30px;
+	border-radius: 100px;
+	
+	color: white;
+	text-align: center;
 	background-color: Transparent;
     background-repeat: no-repeat;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    border-radius: 100px;
     outline: none;
-    margin-top: 100px;
-	height: 200px;
 }
 
 /* Hover for SFW and NSFW */
@@ -106,15 +119,16 @@ ul {
 .updateCardDeck:hover  {
 
 	font-size:50px;
-	color: white;
 	transition: .5s ease;
+	color: white;
 	background-color: Transparent;
     background-repeat:no-repeat;
     text-decoration: none;
 }
-/* Each Game Card */
 
-	/* Bounce Animation */
+/* ----- Each Game Card ----- */
+
+	/* ///// Bounce Animation ///// */
 @keyframes bounce {
 	0%, 20%, 60%, 100% {
 		-webkit-transform: translateY(0);
@@ -137,7 +151,7 @@ ul {
 .update-deck:hover {
 	animation: bounce 1s;
 }
-	/* END Bounce Animation */
+	/* ///// END Bounce Animation ///// */
 
 
 .sfw-deck,
@@ -147,10 +161,10 @@ ul {
 	margin: 0px 20px;
 	border-radius: 10px;
 	height: 500px;
-	background-color: tomato;
-
-	background-size: cover;
 	box-shadow: 7px 6px 40px black;
+	background-color: tomato;
+	background-size: cover;
+	
 }
 
 .sfw-deck {
@@ -190,16 +204,19 @@ ul {
 }
 
 .addQuestionButton { margin-top: 10px; }
-
+.all-questions-header {
+	color: white;
+	text-align: center;
+}
 .backButton { margin-top: 100px; }
 
 /* ----- NSFW subtext ----- */
 
 .nsfw-subtext {
 	font-size: 20px;
+	transition: .2s ease;
 	visibility: hidden;
 	color: white;
-	transition: .2s ease;
 }
 
 .startNSFWDeck:hover .nsfw-subtext {
@@ -310,22 +327,12 @@ ul {
 }
 
 
-.listed_questions {
-	border-style: solid;
-	border-width: 2px;
-	padding: 7px;
-	margin: 3px;
-	list-style: none;
-	border-radius: 17px;
-	box-shadow: 3px 3px 3px #888888;
-}
-
 /* Index Page Form */
 
 form {
 	display: inline-block;
 	color: white;
-	padding-top: 120px;
+	padding: 20px;
 	margin: 0 auto;
 }
 
@@ -336,13 +343,4 @@ form {
 	color: white;
 	font-weight: bold;
 	font-variant: small-caps; 
-}
-/*.title-name:hover {
-	transition: .5s ease;
-	color: black;
-	text-decoration: none;
-}
-
-.title-name:hover a p.new-label:after {
-	content: 'The Card Game';
 }

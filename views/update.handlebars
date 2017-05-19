@@ -4,7 +4,7 @@
 <div class="bg-long">
     <div class="container">        
         <div class="row">
-            <h3> Add a question </h3>
+            {{!-- <h3> Add a question </h3> --}}
             <form action="api/addQuestion/{{this.id}}"  class="col-md-4 col-md-offset-4" method="POST" id="questions-form">
                 <label for="newQuestion">Type Your Question:</label>
                 <input class="form-control" placeholder="Add a question" type="text" name="newQuestion" />
@@ -19,32 +19,37 @@
 
                 <button type="submit" class="btn btn-default addQuestionButton">Add Question</button>
                 <br>
+                <a href="/" class="btn btn-warning backButton">Back</a>
             </form>
+
         </div>
+        
     </div>
+
 </div> 
         
     <div class="container scroll-long">
-        {{!-- <div class="row"> --}}
-                <h3> All of your current questions </h3>
+        <div class="row">
+            <h3 class="all-questions-header"> All Questions </h3>
 
-                <ul>
-                    {{#each userQuestions}}
-                        <li class="listed_questions">
-                            <form action="/api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
-                                <input type="hidden" name="id" value="{{this.id}}">
-                                <p> Question: {{this.question}}</p>
-                                <button class="del-btn glyphicon glyphicon-remove" type="submit"></button>
-                            </form>
-                            
+            <ul>
+                {{#each userQuestions}}
+                    <li class="listed-questions">
+                        <form action="/api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="id" value="{{this.id}}">
+                            <p> Question: {{this.question}}</p>
+                            <button class="del-btn glyphicon glyphicon-remove" type="submit"></button>
                             <button class="edit"><a class="glyphicon glyphicon-pencil" href="/edit/{{this.id}}"></a></button>
-                        </li>
-                    {{/each}}
-                </ul>
-       {{!--  </div> --}}
+                        </form>
+                        
+
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </div>
-{{>footer}}
+{{!-- {{>footer}} --}}
 
 {{!-- {{>footer}} --}}
 
