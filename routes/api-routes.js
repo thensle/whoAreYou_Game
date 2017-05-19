@@ -11,10 +11,11 @@ var Sequelize = require("sequelize");
 
 
 // =============================================================
+
 // Routes
 // =============================================================
 module.exports = function(app) {
-  
+
   // GET route
   app.get("/api/questions", function(req, res) {
        db.Questions.findAll({}).then(function(dbQuestions){
@@ -31,19 +32,20 @@ module.exports = function(app) {
      })
  });
 
+/***** Changed db.users to db.Users to fix "findall on undefined" problem *****/
 //All Users API Call
   app.get("/api/users", function(req, res) {
-     db.users.findAll({}).then(function(dbUsers){
+     db.Users.findAll({}).then(function(dbUsers){
          res.json(dbUsers);
      })
  });
 
-  // GET NSFW route 
+  // GET NSFW route
 
 
 
   // =============================================================
-  // GET, 1 NSFW card at random, route 
+  // GET, 1 NSFW card at random, route
   // =============================================================
 
   app.get("/api/nsfw", function(req, res) {
@@ -55,27 +57,26 @@ module.exports = function(app) {
       ],
         where: {
           sfw: false
-        } 
+        }
     }).then(function(dbQuestions){
-      res.json(dbQuestions); 
+      res.json(dbQuestions);
   	})
   });
 
   // =============================================================
-  // GET, 1 SFW card at random, route 
+  // GET, 1 SFW card at random, route
   // =============================================================
   app.get("/api/sfw", function(req, res) {
-    db.userQuestions.findAll({
+    db.Questions.findAll({
       limit: 1,
       order: [
         [Sequelize.fn('RAND')]
       ],
         where: {
-          sfw: true,
-          userId: req.params.id
+          sfw: true
         }
     }).then(function(dbQuestions){
-      res.json(dbQuestions); 
+      res.json(dbQuestions);
     })
   });
 
@@ -83,10 +84,10 @@ module.exports = function(app) {
   app.post("/api/addQuestion", function(req,res){
     console.log(req.body);
   	db.Questions.create({
-  		question: req.body.newQuestion, 
+  		question: req.body.newQuestion,
   		sfw: req.body.newSfw
-  	}).then(function(dbQuestions){  
-  		res.json(dbQuestions); 
+  	}).then(function(dbQuestions){
+  		res.json(dbQuestions);
   	})
   })
 
@@ -111,8 +112,7 @@ module.exports = function(app) {
         // this may need to have the userID somewhere here?
       }
     }).then(function(dbQuestions) {
-      dbQuestions.dataValues.UserId
-      res.redirect("/:id/update");
+      res.redirect("/createCard");
     });
   });
 
@@ -124,18 +124,17 @@ module.exports = function(app) {
         // this may need to have the userID somewhere here?
       }
     }).then(function(dbQuestions) {
-      res.redirect(dbQuestions.dataValues.UserId+"/update");
+      res.redirect("/createCard");
     });
   });
 
 //After user is validated
   app.post("/newUser", function(req, res){
     db.Users.create({
-      email: req.body.userEmail, 
+      email: req.body.userEmail,
       password: req.body.userPassword
     }).then(function(newUser){
-      //res.json(newUser);  
-      res.redirect(newUser.id+"/game");
+      res.json(newUser);
       createQuestions(newUser);
     })
   });
@@ -153,7 +152,7 @@ module.exports = function(app) {
 
 
       for (var i = 0; i < templateQuestions.length; i++){
-        
+
         question_text.push(templateQuestions[i].dataValues.question);
         question_sfw.push(templateQuestions[i].dataValues.sfw);
       };
@@ -161,15 +160,15 @@ module.exports = function(app) {
       console.log("this is the length of the template array" + templateQuestions.length);
 
       var instances = [];
-      
+
 
         for (var i = 0; i < templateQuestions.length; i++){
           var instance = {};
 
             instance = {
-              
-              question: question_text[i], 
-              sfw: question_sfw[i], 
+
+              question: question_text[i],
+              sfw: question_sfw[i],
               UserId: id
             };
 
@@ -180,7 +179,19 @@ module.exports = function(app) {
         return db.userQuestions.findAll();
       });
     });
- 
+
 
  };
 };
+
+ //Login an existing user
+
+ // app.post("/login", function(req,res){
+ //    var userEmail = req.body.userEmail;
+ //    var userPassword = req.body.userPassword;
+
+
+ //    }).then(function(data){
+ //      app.redirect(/)
+ //    })
+ //  });

@@ -6,15 +6,12 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
-  // user route loads user.handlebars
+
+  // index route loads index.handlebars
   app.get("/", function(req, res) {
     res.render(path.join(__dirname + "/../views/index.handlebars"));
   });
 
-  // id/game route loads game.handlebars
-  app.get("/:id/game", function(req, res) {
-    res.render(path.join(__dirname + "/../views/game.handlebars"));
-  });
 
   // user route loads user.handlebars
   app.get("/user", function(req, res) {
@@ -33,14 +30,14 @@ module.exports = function(app) {
     })
   });
 
-  app.get("/:id/update", function(req, res) {
+  app.get("/createCard", function(req, res) {
     // We just have to specify which todo we want to destroy with "where"
     db.userQuestions.findAll({
     }).then(function(dbQuestions) {
       res.render(path.join(__dirname + "/../views/update.handlebars"), { userQuestions: dbQuestions });
     })
   });
-  
+
   app.get("/nsfw", function(req, res) {
       res.render(path.join(__dirname + "/../views/NSFW.handlebars"));
     });
@@ -48,5 +45,10 @@ module.exports = function(app) {
   app.get("/sfw", function(req, res) {
       res.render(path.join(__dirname + "/../views/SFW.handlebars"));
     });
+
+   // user route loads user.handlebars
+  app.get("/login", function(req, res) {
+    res.render(path.join(__dirname + "/../views/login.handlebars"));
+  });
 
 };

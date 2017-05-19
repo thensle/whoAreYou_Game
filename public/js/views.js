@@ -11,17 +11,15 @@ $(document).ready(function() {
         });
 	})
 
-	// we need to 
 	// AJAX call to get "Safe for Work" questions
 	$("#sfw-next").on("click", function(event) {
+	
 		$.ajax({
-            url: "/api/sfw",
+            url: "api/sfw",
             method: 'GET'
         }).then(function(response) {
-	        $(".sfw-modal-body").text(response[0].question);
+            $(".sfw-modal-body").text(response[0].question);
         });
-        
-
 	})
 
 

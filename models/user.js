@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
         password: {
             type: DataTypes.STRING,
             allowNull: true,
-        },
+        }
     },
 
         {
@@ -21,8 +21,7 @@ module.exports = function(sequelize, DataTypes) {
                     });
                 }
             },
-
-            timestamps: false 
+            timestamps: false
         }
     );
     return Users;

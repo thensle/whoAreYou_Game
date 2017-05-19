@@ -1,15 +1,12 @@
 DROP DATABASE IF EXISTS `question_db`;
 
 CREATE DATABASE `question_db`;
-
-
-
 -- DO NOT RUN CODE BELOW THIS LINE!!!!!
 --===================================--
--- These will be added into their own 
+-- These will be added into their own
 -- .js files in the models folder.
 -- They're here for reference only.
--- Delete before final push! 
+-- Delete before final push!
 
 
 USE `question_db`;
@@ -23,7 +20,7 @@ PRIMARY KEY (id)
 
 -- Foreign Key maybe needed. Look Into.
 CREATE TABLE user (
-id INT AUTO_INCREMENT, 
+id INT AUTO_INCREMENT,
 username VARCHAR(40),
 user_question VARCHAR(140),
 PRIMARY KEY (id)
