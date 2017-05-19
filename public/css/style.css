@@ -3,11 +3,19 @@
 /* ----- UNIVERSAL OVERRIDE ----- */
 
 body {
-
 	background: -webkit-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: -o-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: linear-gradient(51deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-	
+		/* For browsers that do not support gradients */
+	/*background: pink; */
+		/* For Safari 5.1 to 6.0 */
+	/*background: -webkit-linear-gradient(bottom, pink, #eb7f88);*/
+	 	/* For Opera 11.1 to 12.0 */
+	/*background: -o-linear-gradient(bottom, pink, #eb7f88);*/
+	 	/* For Firefox 3.6 to 15 */
+	/*background: -moz-linear-gradient(bottom, pink, #eb7f88);*/
+	 	/* Standard syntax */
+	/*background: linear-gradient(to bottom, pink, #eb7f88);*/
 }
 
 
@@ -43,10 +51,30 @@ ul {
 /* ------ UNIVERSAL OVERRIDE END ------ */
 
 
+/* ----- Signup Page ----- */
+.email-title {
+	font-size: 20px;
+}
+
+/* ----- User Dashboard ----- */
+#user-dashboard {
+	text-align:center;
+}
+
+/* ----- Update Page ----- */
+.bg-long {
+	width: 100vw;
+    height: 1000px;
+	background: #78668E, url('bg-header-1 copy.jpg') repeat-y,  
+	/*background-color: #78668E;*/
+	/*background-repeat: repeat-y;*/
+}
+
+
 /* ----- Basic stylistic look of NSFW and SWF ----- */
 .startSFWDeck,
 .startNSFWDeck,
-.createCard  {
+.updateCardDeck {
 	color: white;
 	transition: .5s ease;
 	text-align: center;
@@ -65,7 +93,7 @@ ul {
 /* Hover for SFW and NSFW */
 .startSFWDeck:hover,
 .startNSFWDeck:hover,
-.createCard:hover  {
+.updateCardDeck:hover  {
 
 	font-size:50px;
 	color: white;
@@ -112,7 +140,7 @@ ul {
 	background-color: tomato;
 
 	background-size: cover;
-	box-shadow: 10px 10px 5px black;
+	box-shadow: 7px 6px 40px black;
 }
 
 .sfw-deck {
@@ -149,16 +177,6 @@ ul {
 .update-deck {
 	text-shadow: 1px 0px 0px black, 0 0 10em gray, 0 0 0.1em black;
 	background-image: url("/images/update-blanks.jpg");
-		/* For browsers that do not support gradients */
-	/*background: pink; */
-		/* For Safari 5.1 to 6.0 */
-	/*background: -webkit-linear-gradient(bottom, pink, #eb7f88);*/
-	 	/* For Opera 11.1 to 12.0 */
-	/*background: -o-linear-gradient(bottom, pink, #eb7f88);*/
-	 	/* For Firefox 3.6 to 15 */
-	/*background: -moz-linear-gradient(bottom, pink, #eb7f88);*/
-	 	/* Standard syntax */
-	/*background: linear-gradient(to bottom, pink, #eb7f88);*/
 }
 
 .addQuestionButton { margin-top: 10px; }
