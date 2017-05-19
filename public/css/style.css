@@ -61,10 +61,10 @@ ul {
 	text-align:center;
 }
 
-/* ----- Update Page: In Parrallax Mode; ----- */
+/* ----- Update Page: In Parallax Mode; ----- */
 .bg-long {
-	min-height: 500px; 
-	background: url('bg-header-1 copy.jpg');
+	height: 600px;  
+	background: url('/images/bg-header-1 copy.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
