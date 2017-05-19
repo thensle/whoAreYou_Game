@@ -61,13 +61,23 @@ ul {
 	text-align:center;
 }
 
-/* ----- Update Page ----- */
+/* ----- Update Page: In Parrallax Mode; ----- */
 .bg-long {
-	width: 100vw;
-    height: 1000px;
-	background: #78668E, url('bg-header-1 copy.jpg') repeat-y,  
-	/*background-color: #78668E;*/
-	/*background-repeat: repeat-y;*/
+	min-height: 500px; 
+	background: url('bg-header-1 copy.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
+.scroll-long {
+	display: inline-block;
+	width: 1920px;
+	margin: 0px -150px;
+	background-color: tomato;
+	text-align:center;
 }
 
 

@@ -1,46 +1,48 @@
 
 {{> header}}
-<div class="bg-long">
     <div class="container">
-        <div class="row">
-            <h3> Add a question </h3>
-            <form action="api/addQuestion/{{this.id}}"  class="col-md-4 col-md-offset-4" method="POST" id="questions-form">
-                <label for="newQuestion">Type Your Question:</label>
-                <input class="form-control" placeholder="Add a question" type="text" name="newQuestion" />
-                <br>
-                {{!--<label for="">Is it safe for work? Type your bool!!!</label>
-                <input class="form-control SFWbutton" type="number" name="newSfw">--}}
-                <label for="">Is this question safe for work?</label>
-                <label><input type="radio" name="newSfw" value="1" checked="checked">Yes</label>
-                <label><input type="radio" name="newSfw" value="0">No</label>
-                <br>
+        <div >
+            <div class="row">
+                <h3> Add a question </h3>
+                <form action="api/addQuestion/{{this.id}}"  class="bg-long col-md-4 col-md-offset-4" method="POST" id="questions-form">
+                    <label for="newQuestion">Type Your Question:</label>
+                    <input class="form-control" placeholder="Add a question" type="text" name="newQuestion" />
+                    <br>
+                    {{!--<label for="">Is it safe for work? Type your bool!!!</label>
+                    <input class="form-control SFWbutton" type="number" name="newSfw">--}}
+                    <label for="">Is this question safe for work?</label>
+                    <label><input type="radio" name="newSfw" value="1" checked="checked">Yes</label>
+                    <label><input type="radio" name="newSfw" value="0">No</label>
+                    <br>
 
 
-                <button type="submit" class="btn btn-default addQuestionButton">Add Question</button>
-                <br>
-            </form>
+                    <button type="submit" class="btn btn-default addQuestionButton">Add Question</button>
+                    <br>
+                </form>
+            </div>
         </div>
-
-        
+    </div> 
         <br><br>
         
-
+    <div class="container">
         <div class="row">
-            <h3> All of your current questions </h3>
+            <div class="scroll-long">
+                <h3> All of your current questions </h3>
 
-            <ul>
-                {{#each userQuestions}}
-                    <li class="listed_questions">
-                        <form action="/api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
-                            <input type="hidden" name="id" value="{{this.id}}">
-                            <p> Question: {{this.question}}</p>
-                            <button class="del-btn glyphicon glyphicon-remove" type="submit"></button>
-                        </form>
-                        
-                        <button class="edit"><a class="glyphicon glyphicon-pencil" href="/edit/{{this.id}}"></a></button>
-                    </li>
-                {{/each}}
-            </ul>
+                <ul>
+                    {{#each userQuestions}}
+                        <li class="listed_questions">
+                            <form action="/api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
+                                <input type="hidden" name="id" value="{{this.id}}">
+                                <p> Question: {{this.question}}</p>
+                                <button class="del-btn glyphicon glyphicon-remove" type="submit"></button>
+                            </form>
+                            
+                            <button class="edit"><a class="glyphicon glyphicon-pencil" href="/edit/{{this.id}}"></a></button>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
         </div>
     </div>
 </div>
