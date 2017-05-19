@@ -1,9 +1,8 @@
 $(document).ready(function() {
 	// AJAX call to get "Not safe for work" questions
 	$("#nsfw-next").on("click", function(event) {
-	
 		$.ajax({
-            url: "api/nsfw",
+            url: "/api/nsfw",
             method: 'GET'
         }).then(function(response) {
             $(".nsfw-modal-body").text(response[0].question);

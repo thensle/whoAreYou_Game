@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <h3> Add a question </h3>
-        <form action="api/addQuestion" method="POST" id="questions-form">
+        <form action="api/addQuestion/{{this.id}}" method="POST" id="questions-form">
             <label for="newQuestion">Type Your Question:</label>
             <input class="form-control" placeholder="Add a question" type="text" name="newQuestion" />
             <br>

@@ -24,7 +24,7 @@ module.exports = function(app) {
 
 
 
-  //All Users API Call
+//All Users Question API Call
    app.get("/api/userQuestions", function(req, res) {
      db.userQuestions.findAll({}).then(function(dbQuestions){
          res.json(dbQuestions);
@@ -33,13 +33,10 @@ module.exports = function(app) {
 
 //All Users API Call
   app.get("/api/users", function(req, res) {
-     db.users.findAll({}).then(function(dbUsers){
+     db.Users.findAll({}).then(function(dbUsers){
          res.json(dbUsers);
      })
  });
-
-  // GET NSFW route 
-
 
 
   // =============================================================
@@ -72,7 +69,7 @@ module.exports = function(app) {
       ],
         where: {
           sfw: true,
-          userId: req.params.id
+          // userId: req.params.id
         }
     }).then(function(dbQuestions){
       res.json(dbQuestions); 
@@ -80,7 +77,7 @@ module.exports = function(app) {
   });
 
 
-  app.post("/api/addQuestion", function(req,res){
+  app.post(":id/api/addQuestion", function(req,res){
     console.log(req.body);
   	db.Questions.create({
   		question: req.body.newQuestion, 
@@ -111,12 +108,12 @@ module.exports = function(app) {
         // this may need to have the userID somewhere here?
       }
     }).then(function(dbQuestions) {
-      dbQuestions.dataValues.UserId
-      res.redirect("/:id/update");
+        
+      res.redirect(dbQuestions.dataValues.UserId+"/update");
     });
   });
 
-  app.delete("/api/userQuestions/:id", function(req, res) {
+  app.delete(":id/api/userQuestions/", function(req, res) {
     // We just have to specify which todo we want to destroy with "where"
     db.userQuestions.destroy({
       where: {

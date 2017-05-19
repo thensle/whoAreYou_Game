@@ -147,7 +147,8 @@ ul {
 }
 
 .update-deck {
-	text-shadow: 1px 0px 0px black, 0 0 10em tomato, 0 0 0.1em black;
+	text-shadow: 1px 0px 0px black, 0 0 10em gray, 0 0 0.1em black;
+	background-image: url("/images/update-blanks.jpg");
 		/* For browsers that do not support gradients */
 	/*background: pink; */
 		/* For Safari 5.1 to 6.0 */
