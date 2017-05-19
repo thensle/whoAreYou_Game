@@ -23,8 +23,43 @@ $(document).ready(function() {
 
 	})
 
+	function getTodos() {
+    	$.get("/api/Questions", function(data) {
+    	  console.log("Questions", data);
+    	  todos = data;
+    	  initializeRows();
+    	});
+	}
+ 
+ $(document).on("click", "button.delete", deleteTodo);
+  function deleteTodo() {
+    var id = $(this).data("id");
+    $.ajax({
+      method: "DELETE",
+      url: "/api/Questions/" + id
+    })
+    .done(function() {
+      getTodos();
+    });
+  }
+
+
+  // This function deletes a todo when the user clicks the delete button
+  function deleteTodo() {
+    var id = $(this).data("id");
+    $.ajax({
+      method: "DELETE",
+      url: "/api/Questions/" + id
+    })
+    .done(function() {
+      getTodos();
+    });
+  }
 
 });
+
+
+
 
 
 	

@@ -12,7 +12,7 @@ module.exports = function(app) {
   });
 
   // id/game route loads game.handlebars
-  app.get("/:id/game", function(req, res) {
+  app.get("/game", function(req, res) {
     res.render(path.join(__dirname + "/../views/game.handlebars"));
   });
 
@@ -33,7 +33,7 @@ module.exports = function(app) {
   //   })
   // });
 
-  app.get("/:id/update", function(req, res) {
+  app.get("/update", function(req, res) {
     // We just have to specify which todo we want to destroy with "where"
     db.userQuestions.findAll({
     }).then(function(dbQuestions) {

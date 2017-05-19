@@ -21,7 +21,7 @@ module.exports = function(app, passport) {
 
 	app.post('/signup', passport.authenticate('local-signup', {
 		successRedirect: '/userDashboard',
-		failureRedirect: '/index'
+		failureRedirect: '/'
 	}));
 
 	// app.post('/signin', passport.authenticate('local-signin', {
@@ -33,6 +33,6 @@ module.exports = function(app, passport) {
 	function isLoggedIn(req, res, next) {
 		if (req.isAuthenticated())
 			return next();
-		res.redirect('/:id/game');
+		res.redirect(':id/game');
 	}
 };
