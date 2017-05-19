@@ -1,10 +1,11 @@
 {{> header}}
 
-<form class= "createUserForm" action="/newUser" method="POST">
 
-   <label for="">Email</label>
+<form class= "createUserForm col-md-4 col-md-offset-4" action="/newUser" method="POST">
+
+   <label for="" class="email-title">Welcome, Please Login or <a href="/">Sign up</a></label>
    <input class="form-control userEmail" placeholder="Enter your email" type="text" name="userEmail"/>
-   <input class="form-control userPassword" placeholder="Create your password" type="text" name="userPassword"/>
+   <input class="form-control userPassword" placeholder="Enter your password" type="text" name="userPassword"/>
 
 <button action= type="submit" class="btn btn-default registerButton">Submit</button>
 

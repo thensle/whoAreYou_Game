@@ -16,6 +16,11 @@ module.exports = function(app) {
     res.render(path.join(__dirname + "/../views/game.handlebars"));
   });
 
+    // id/game route loads game.handlebars
+  app.get("/login", function(req, res) {
+    res.render(path.join(__dirname + "/../views/login.handlebars"));
+  });
+
   // user route loads user.handlebars
   app.get("/user", function(req, res) {
     res.render(path.join(__dirname + "/../views/user.handlebars"));
