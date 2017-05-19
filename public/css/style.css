@@ -1,36 +1,17 @@
 .jumbotron { text-align:center; }*/
 
-/* ----- UNIVERSAL OVERRIDE ----- */
+/* ///// UNIVERSAL OVERRIDE ///// */
 
 body {
 	background: -webkit-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: -o-linear-gradient(321deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	background: linear-gradient(51deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-		/* For browsers that do not support gradients */
-	/*background: pink; */
-		/* For Safari 5.1 to 6.0 */
-	/*background: -webkit-linear-gradient(bottom, pink, #eb7f88);*/
-	 	/* For Opera 11.1 to 12.0 */
-	/*background: -o-linear-gradient(bottom, pink, #eb7f88);*/
-	 	/* For Firefox 3.6 to 15 */
-	/*background: -moz-linear-gradient(bottom, pink, #eb7f88);*/
-	 	/* Standard syntax */
-	/*background: linear-gradient(to bottom, pink, #eb7f88);*/
 }
 
 
 ul {
 	margin: 0px;
 	padding: 0px;
-}
-
-/* ----- background styling ----- */
-.view-port {
-	float: left;
-  	background-size: cover;
-	width: 100vw;
-	height: 100vh;
-	background-image: url("/images/bg-header-1 copy.jpg");
 }
 
 .navbar {
@@ -47,8 +28,17 @@ ul {
 	border-color: transparent;
 }
 	
-/* ------ UNIVERSAL OVERRIDE END ------ */
+/* ///// UNIVERSAL OVERRIDE END ///// */
 
+
+/* ----- background styling ----- */
+.view-port {
+	float: left;
+  	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("/images/bg-header-1 copy.jpg");
+}
 
 /* ----- Signup Page ----- */
 .email-title {
@@ -60,7 +50,7 @@ ul {
 	text-align:center;
 }
 
-/* ----- Update Page: In Parallax Mode ----- */
+/* ----- Update-Page: In Parallax Mode ----- */
 .bg-long {
 	height: 600px;  
 	background: url('/images/bg-header-1 copy.jpg');
@@ -76,7 +66,7 @@ ul {
 	background-color: #78668E;
 	
 }
-
+/* ///// Update-Page: In Parallax Mode ///// */
 
 .listed-questions {
 	display: inline-block;
@@ -85,7 +75,6 @@ ul {
 	margin: 10px;
 	border-radius: 17px;
 	box-shadow: 3px 3px 3px black;
-	
 	background-color: tomato;
 	text-align: center;
 	vertical-align: text-top;
@@ -102,7 +91,6 @@ ul {
 	transition: .5s ease;
 	font-size: 30px;
 	border-radius: 100px;
-	
 	color: white;
 	text-align: center;
 	background-color: Transparent;
@@ -117,7 +105,6 @@ ul {
 .startSFWDeck:hover,
 .startNSFWDeck:hover,
 .updateCardDeck:hover  {
-
 	font-size:50px;
 	transition: .5s ease;
 	color: white;
@@ -168,34 +155,34 @@ ul {
 }
 
 .sfw-deck {
+		/* For browsers that do not support gradients */
+	background: orange; 
+		/* For Safari 5.1 to 6.0 */
+	background: -webkit-linear-gradient(bottom, orange, orange, #F26609);
+		/* For Opera 11.1 to 12.0 */
+	background: -o-linear-gradient(bottom, orange, orange, #F26609);
+		/* For Firefox 3.6 to 15 */
+	background: -moz-linear-gradient(bottom, orange, orange, #F26609);
+		/* Standard syntax */
+	background: linear-gradient(to bottom, orange, orange, orange, #ED9A25);
+
 	text-shadow: 1px 0px 0px yellow, 0 0 10em black, 0 0 0.1em black;
 	background-image: url("/images/sfw-fruits.jpg");
-		/* For browsers that do not support gradients */
-	/*background: orange; */
-		/* For Safari 5.1 to 6.0 */
-	/*background: -webkit-linear-gradient(bottom, orange, orange, #F26609);*/
-		/* For Opera 11.1 to 12.0 */
-	/*background: -o-linear-gradient(bottom, orange, orange, #F26609);*/
-		/* For Firefox 3.6 to 15 */
-	/*background: -moz-linear-gradient(bottom, orange, orange, #F26609);*/
-		/* Standard syntax */
-	/*background: linear-gradient(to bottom, orange, orange, orange, #ED9A25);*/
 }
 
 .nsfw-deck {
+		/* For browsers that do not support gradients */
+	background: aqua;
+	 	/* For Safari 5.1 to 6.0 */
+	background: -webkit-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0);
+	 	/* For Opera 11.1 to 12.0 */
+	background: -o-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0);
+		/* For Firefox 3.6 to 15 */
+	background: -moz-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0);
+	 	/* Standard syntax */
+	background: linear-gradient(to bottom, #0099cc, #0099cc, #0099cc, #4169b0);
 	text-shadow: 1px 0px 0px black, 0 0 10em black, 0 0 0.1em black;
 	background-image: url("/images/nsfw-peppers.jpg");
-		/* For browsers that do not support gradients */
-	/*background: aqua;*/
-	 	/* For Safari 5.1 to 6.0 */
-	/*background: -webkit-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0);*/
-	 	/* For Opera 11.1 to 12.0 */
-	/*background: -o-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0);*/
-		/* For Firefox 3.6 to 15 */
-	/*background: -moz-linear-gradient(bottom, #0099cc, #0099cc, #0099cc, #4169b0);*/
-	 	/* Standard syntax */
-	/*background: linear-gradient(to bottom, #0099cc, #0099cc, #0099cc, #4169b0);*/
-
 }
 
 .update-deck {
@@ -211,7 +198,6 @@ ul {
 .backButton { margin-top: 100px; }
 
 /* ----- NSFW subtext ----- */
-
 .nsfw-subtext {
 	font-size: 20px;
 	transition: .2s ease;
@@ -228,7 +214,6 @@ ul {
 
 
 /* ----- Brand Image Animation ----- */
-
 .logo-img {
 	height: 50px;
 	width: 50px;
@@ -243,7 +228,6 @@ ul {
 }	
 
 /* ----- BOOTSTRAP Override ----- */
-
 /*.column,
 .container { 
   padding: 15px 0px;
@@ -256,21 +240,38 @@ ul {
 
 /* ----- MODAL override ----- */
 
-/* ----- sfw Modal ----- */ 
-
-/*.modal-header-sfw,
-.sfw-modal-body,
-.modal-footer-sfw {
+.nsfw-modal-body,{
 	border: none;
 
-}*/
+}
 
-.modal-content-sfw {
-	background-color: orange;
-	border-radius: 20px;
+.modal-footer,
+.modal-header {
+	border: none;
+
+}
+
+#sfwModalLabel, 
+#nsfwModalLabel {
+	font-size: 20px;
+}
+
+.modal-content-sfw,
+.modal-content-nsfw  {
 	text-align: center;
+	border-radius: 20px;
+	font-size: 40px;
+	margin: 10px;
 	height: 500px;
 	width: 400px;
+}
+
+.modal-content-nsfw {
+	background-color: #0099cc;
+	color: white;
+}
+.modal-content-sfw {
+	background-color: orange;
 }
 
 #swfModalLabel {
@@ -278,32 +279,8 @@ ul {
 }
 
 
-/* ----- nsfw Modal ----- */
-
-.modal-header-nsfw,
-.nsfw-modal-body,
-.modal-footer-nsfw {
-	border: none;
-
-}
-
-.modal-content-nsfw {
-	background-color: #0099cc;
-	text-align: center;
-	color: white;
-	height: 500px;
-	width: 400px;
-	font-size: 15px;
-	
-}
-
-#nsfwModalLabel {
-	font-size: 30px;
-}
-
 
 /* ----- Create a Card ----- */
-
 .del-btn {
 	border-radius: 7px;
 	background-color: red;

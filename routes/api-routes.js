@@ -3,7 +3,7 @@
 // =============================================================
 
 var db = require("../models");
-var User = require("../models/user.js");
+// var User = require("../models/user.js");
 var Sequelize = require("sequelize");
 
 // =============================================================
