@@ -1,29 +1,29 @@
 {
-  "name": "who_are_you_the_game",
-  "version": "1.0.0",
-  "description": "Ask your friends, family, complete strangers personal and not so personal questions. A great way to lose and make new friends. ",
-  "main": "server.js",
-  "scripts": {
+    "name": "who_are_you_the_game",
+    "version": "1.0.0",
+    "description": "Ask your friends, family, complete strangers personal and not so personal questions. A great way to lose and make new friends. ",
+    "main": "server.js",
+    "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-  },
-  "repository": {
+    },
+    "repository": {
     "type": "git",
     "url": "git+https://github.com/thensle/whoAreYou_Game.git"
-  },
-  "keywords": [
+    },
+    "keywords": [
     "game",
     "nsfw",
     "whoareyou",
     "questions"
-  ],
-  "author": "Tara Hensle, Chris Leeson, Julie Fisher, Michael Realy, Liam Fox",
-  "license": "ISC",
-  "bugs": {
+    ],
+    "author": "Tara Hensle, Chris Leeson, Julie Fisher, Michael Realy, Liam Fox",
+    "license": "ISC",
+    "bugs": {
     "url": "https://github.com/thensle/whoAreYou_Game/issues"
-  },
-  "homepage": "https://github.com/thensle/whoAreYou_Game#readme",
-  "dependencies": {
+    },
+    "homepage": "https://github.com/thensle/whoAreYou_Game#readme",
+    "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.1",
     "dotenv": "^4.0.0",
@@ -36,5 +36,5 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "sequelize": "^3.30.4"
-  }
+    }
 }

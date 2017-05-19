@@ -125,6 +125,10 @@ module.exports = function(app) {
         })
     });
 
+// =============================================================
+// Functions
+// =============================================================
+
     // After Validation Function
     function createQuestions(newUser){
         db.Questions.findAll({}).then(function(dbQuestions){
