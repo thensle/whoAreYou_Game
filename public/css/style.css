@@ -300,3 +300,18 @@ form {
 	font-weight: bold;
 	font-variant: small-caps; 
 }
+
+/* ----- Footer ----- */
+.footer {
+	position: relative;
+	margin-top: -150px; /* negative value of footer height */
+	height: 150px;
+	clear:both;
+	padding-top:20px;
+} 
+
+#footer-id a{
+	text-decoration: none;
+	color: white;
+}
+
