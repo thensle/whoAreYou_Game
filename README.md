@@ -1,6 +1,6 @@
-TELL ME, WHO ARE YOU?
+#H1 TELL ME, WHO ARE YOU?
 
-Summary
+#H3 Summary
 
 “Tell Me, Who ARE You?” is a social, get-to-know you web application built using Node.js, Express.js, Sequelize.js with a MYSQL database, Passport.js (for authentication), Javascript, jQuery, HTML, CSS, and express-handlebars.
 
@@ -8,11 +8,11 @@ Players are required to create an account and login before playing. Users can pl
 
 If you have questions, feel free to contact any of the contributors to this project.
 
-Registering and Signing In
+#H3Registering and Signing In
 
 Upon accessing the site, the application will prompt users to create an account. Passport will use the encrypted user information in the database to authenticate the user. With a validated and authenticated username/password combination, questions from a “template deck” will automatically be added to the user’s management page. From here, players can enter a game mode (NSFW vs. SFW) or update their card deck questions.
 
-Game Mode
+#H3Game Mode
 
 Safe for Work (SFW) mode prompts players to answer basic get-to-know-you questions. They are perfect for getting to know someone you just met or someone you don’t know well. 
 
