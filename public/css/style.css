@@ -226,17 +226,6 @@ ul {
 	transition: .5s ease
 }	
 
-/* ----- BOOTSTRAP Override ----- */
-/*.column,
-.container { 
-  padding: 15px 0px;
-}*/
-
-/*.row {
-	margin: -20px -75px;
-}
-*/
-
 /* ----- MODAL override ----- */
 
 .nsfw-modal-body,{
@@ -288,15 +277,6 @@ ul {
 	height: 25px;
 	width: 30px;
 }
-
-.edit {
-	/*border-radius: 7px;*/
-	/*background-color: lightskyblue;*/
-	/*border-color: silver;*/
-	/*height: 25px;
-	width: 30px;*/
-}
-
 
 .modal-backdrop {
 	

@@ -10,7 +10,6 @@ $(document).ready(function() {
         });
 	})
 
-	// we need to 
 	// AJAX call to get "Safe for Work" questions
 	$("#sfw-next").on("click", function(event) {
 		$.ajax({

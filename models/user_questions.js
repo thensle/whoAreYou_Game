@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     sfw: { 
         type: DataTypes.BOOLEAN    
-    }
+    },
   },
     {
       classMethod: function(models){

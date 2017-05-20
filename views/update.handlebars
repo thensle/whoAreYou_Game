@@ -5,7 +5,7 @@
     <div class="container">        
         <div class="row">
             {{!-- <h3> Add a question </h3> --}}
-            <form action="api/addQuestion/{{this.id}}"  class="col-md-4 col-md-offset-4" method="POST" id="questions-form">
+            <form action="api/addQuestion/"  class="col-md-4 col-md-offset-4" method="POST" id="questions-form">
                 <label for="newQuestion">Type Your Question:</label>
                 <input class="form-control" placeholder="Add a question" type="text" name="newQuestion" />
                 <br>
@@ -16,35 +16,44 @@
                 <label><input type="radio" name="newSfw" value="0">No</label>
                 <br>
 
-
                 <button type="submit" class="btn btn-default addQuestionButton">Add Question</button>
                 <br>
                 <a href="/game" class="btn btn-warning backButton">Back</a>
             </form>
-
         </div>
-        
     </div>
-
 </div> 
         
     <div class="container scroll-long">
         <div class="row">
-            <h3 class="all-questions-header"> All Questions </h3>
+            <h3 class="all-questions-header"> Your Questions </h3>
 
             <ul>
                 {{#each userQuestions}}
                     <li class="listed-questions">
-                        <form action="/api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
-                            <input type="hidden" name="id" value="{{this.id}}">
+                    {{!-- note that both these buttons delete--}}
+                        <form action="api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value="delete">
                             <p> Question: {{this.question}}</p>
-                            <button class="btn btn-info glyphicon glyphicon-pencil"><a href="/edit/{{this.id}}"></a></button>
-                            <button class="btn btn-danger glyphicon glyphicon-remove" type="submit"></button>
+                            <button class="btn btn-danger glyphicon glyphicon-remove" type="submit"></button>                        
+                            <button class="btn btn-info glyphicon glyphicon-pencil"><a href="/edit/{{this.id}}?_method=PUT"></a></button>
+    
                         </form>
-                        
-
                     </li>
                 {{/each}}
+{{!--             </ul>
+            <h3 class="all-questions-header"> All Questions 
+            <ul>
+                {{#each Questions}}
+                    <li class="listed-questions">
+                          <form action="api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value="delete">
+                            <p> Question: {{this.question}}</p>
+                            <button class="btn btn-info glyphicon glyphicon-pencil"><a href="/edit/{{this.id}}?_method=PUT"></a></button>
+                            <button class="btn btn-danger glyphicon glyphicon-remove" type="submit"></button>
+                        </form>
+                    </li>
+                {{/each}} --}}
             </ul>
         </div>
     </div>

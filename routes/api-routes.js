@@ -3,7 +3,6 @@
 // =============================================================
 
 var db = require("../models");
-// var User = require("../models/user.js");
 var Sequelize = require("sequelize");
 
 // =============================================================
@@ -52,7 +51,7 @@ module.exports = function(app) {
 
     // 1 Random SFW Questions
     app.get("/api/sfw", function(req, res) {
-        db.userQuestions.findAll({
+        db.Questions.findAll({
           limit: 1,
           order: [
             [Sequelize.fn('RAND')]
@@ -68,23 +67,19 @@ module.exports = function(app) {
 
 
     // Add New Questions
-    app.post(":id/api/addQuestion", function(req,res){
-        // console.log(req.body);
-        db.Questions.create({
+    app.post("/api/addQuestion", function(req,res){
+        db.userQuestions.create({
             question: req.body.newQuestion, 
-            sfw: req.body.newSfw
+            sfw: req.body.newSfw,
+            // UserID: req.body.username
         }).then(function(dbQuestions){  
-            res.json(dbQuestions); 
+                res.json(dbQuestions); 
+            })
         })
-    })
 
-    // ?????
+    // Update User Question
     app.put("/api/userQuestions/:id", function(req, res) {
-        // We just have to specify which todo we want to destroy with "where"
-        // console.log("/api/userQuestions/" + req.params.id);
-        // console.log("req id " + req.body.id);
-        // console.log("req question " + req.body.editQuestion);
-        // console.log("req sfw " + req.body.editSfw);
+
         db.userQuestions.update(
             {
                 question: req.body.editQuestion,
@@ -92,16 +87,16 @@ module.exports = function(app) {
             },
             {
                 where: {
-                id: req.params.id
-                // this may need to have the userID somewhere here?
-            }
+                    id: req.params.id
+                    // this may need to have the userID somewhere here?
+                }
             }).then(function(dbQuestions) {
-                res.redirect(dbQuestions.dataValues.UserId+"/update");
+                res.redirect("/update");
             });
     });
 
     // Delete User Question
-    app.delete(":id/api/userQuestions/", function(req, res) {
+    app.delete("/api/userQuestions/:id", function(req, res) {
     // We just have to specify which todo we want to destroy with "where"
         db.userQuestions.destroy({
             where: {
@@ -109,7 +104,7 @@ module.exports = function(app) {
             // this may need to have the userID somewhere here?
             }
         }).then(function(dbQuestions) {
-            res.redirect(dbQuestions.dataValues.UserId+"/update");
+            res.redirect("/update");
         });
     });
 
@@ -119,8 +114,7 @@ module.exports = function(app) {
             email: req.body.userEmail, 
             password: req.body.userPassword
         }).then(function(newUser){
-            //res.json(newUser);  
-            res.redirect(newUser.id+"/game");
+            res.redirect("/game");
             createQuestions(newUser);
         })
     });
