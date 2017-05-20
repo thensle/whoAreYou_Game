@@ -24,5 +24,3 @@ While there are no formal rules for playing “Tell Me, Who Are You?”, the gen
 
 After logging in or exiting the game play, users can tailor the questions within their deck to their own interests, humor, or taste level. On the Update page, users can create a card by typing the question in the text field and select whether it is safe for work or not. Users will also see a visual representation of all the cards currently in their deck. Edit and delete buttons are associated with each question to help manage their questions.
 
-Visiting "/cart" or clicking "Shopping Cart" will display the user's shopping cart with the products they added. At this stage, the user can modify quantities again if they choose or remove products all together before proceeding to checkout.
-
