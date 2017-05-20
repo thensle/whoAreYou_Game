@@ -28,37 +28,22 @@
         <div class="row">
             <h3 class="all-questions-header"> Your Questions </h3>
 
-            <ul>
-                {{#each userQuestions}}
-                    <li class="listed-questions">
-                    {{!-- note that both these buttons delete--}}
-                        <form action="api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
-                            <input type="hidden" name="_method" value="delete">
-                            <p> Question: {{this.question}}</p>
-                            <button class="btn btn-danger glyphicon glyphicon-remove" type="submit"></button>                        
-                            <button class="btn btn-info glyphicon glyphicon-pencil"><a href="/edit/{{this.id}}?_method=PUT"></a></button>
-    
-                        </form>
-                    </li>
-                {{/each}}
-{{!--             </ul>
-            <h3 class="all-questions-header"> All Questions 
-            <ul>
-                {{#each Questions}}
-                    <li class="listed-questions">
-                          <form action="api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
-                            <input type="hidden" name="_method" value="delete">
-                            <p> Question: {{this.question}}</p>
-                            <button class="btn btn-info glyphicon glyphicon-pencil"><a href="/edit/{{this.id}}?_method=PUT"></a></button>
-                            <button class="btn btn-danger glyphicon glyphicon-remove" type="submit"></button>
-                        </form>
-                    </li>
-                {{/each}} --}}
-            </ul>
+                    <ul>
+            {{#each userQuestions}}
+                <li class="listed-questions">
+                    <form action="/api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="id" value="{{this.id}}">
+                        <p> Question: {{this.question}}</p>
+                        <button class="btn btn-danger glyphicon glyphicon-remove" type="submit"></button>
+                                            
+                    <button class="btn btn-info glyphicon glyphicon-pencil" ><a href="/edit/{{this.id}}"></a></button>
+                    </form>
+
+                </li>
+            {{/each}}
         </div>
     </div>
 </div>
-
 
 
 

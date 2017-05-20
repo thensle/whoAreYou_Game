@@ -73,7 +73,7 @@ module.exports = function(app) {
             sfw: req.body.newSfw,
             // UserID: req.body.username
         }).then(function(dbQuestions){  
-                res.json(dbQuestions); 
+                res.redirect("/update"); 
             })
         })
 
@@ -94,6 +94,7 @@ module.exports = function(app) {
                 res.redirect("/update");
             });
     });
+
 
     // Delete User Question
     app.delete("/api/userQuestions/:id", function(req, res) {

@@ -26,6 +26,18 @@ app.get("/user", function(req, res) {
     res.render(path.join(__dirname + "/../views/user.handlebars"));
 });
 
+//edit question
+app.get("/edit/:id", function(req, res) {
+    db.userQuestions.findOne({
+        where: {
+            id: req.params.id
+        }
+    }).then(function(dbQuestion) {
+        // console.log("full dbQuestion in edit route is ", dbQuestion)
+        // console.log("dbQuestion in edit route ", dbQuestion.id);
+        res.render(path.join(__dirname + "/../views/edit.handlebars"), { userQuestions: dbQuestion });
+    })
+});
 
 app.get("/update", function(req, res) {
 // We just have to specify which todo we want to destroy with "where"
