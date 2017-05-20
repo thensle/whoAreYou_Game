@@ -27,20 +27,22 @@
     <div class="container scroll-long">
         <div class="row">
             <h3 class="all-questions-header"> Your Questions </h3>
-
-                    <ul>
+      <ul>
             {{#each userQuestions}}
                 <li class="listed-questions">
                     <form action="/api/userQuestions/{{this.id}}?_method=DELETE" method="POST">
                         <input type="hidden" name="id" value="{{this.id}}">
                         <p> Question: {{this.question}}</p>
                         <button class="btn btn-danger glyphicon glyphicon-remove" type="submit"></button>
-                                            
-                    <button class="btn btn-info glyphicon glyphicon-pencil" ><a href="/edit/{{this.id}}"></a></button>
+
+                    
                     </form>
+
+                    <button class="btn btn-info edit"><a class="glyphicon glyphicon-pencil" href="/edit/{{this.id}}"></a></button>
 
                 </li>
             {{/each}}
+        </ul>
         </div>
     </div>
 </div>
